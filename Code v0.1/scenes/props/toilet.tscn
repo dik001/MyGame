@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bfrywqebrkjld"]
+
+[ext_resource type="Texture2D" uid="uid://6jf6n6nnc8p8" path="res://art/props/toilet.png" id="1_oipak"]
+
+[node name="Toilet" type="Node2D" unique_id=40196682]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1764151272]
+texture = ExtResource("1_oipak")
+
+[node name="InteractionPoint" type="Marker2D" parent="." unique_id=1910579284]

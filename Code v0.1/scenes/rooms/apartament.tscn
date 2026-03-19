@@ -1,0 +1,75 @@
+[gd_scene format=4 uid="uid://bqqpjj4jk6jtm"]
+
+[ext_resource type="Texture2D" uid="uid://bd85iwemkafm3" path="res://tilesets/Floors.png" id="1_rluf0"]
+[ext_resource type="PackedScene" uid="uid://d0imphlreq5gu" path="res://scenes/props/computer_desk.tscn" id="3_klbvn"]
+[ext_resource type="PackedScene" uid="uid://cmhw27gisbcke" path="res://scenes/props/bed.tscn" id="3_ns2m7"]
+[ext_resource type="PackedScene" uid="uid://do1yohhu1lsru" path="res://scenes/props/fridge.tscn" id="4_klbvn"]
+[ext_resource type="PackedScene" uid="uid://xtmpcvfrcgeq" path="res://scenes/props/stove.tscn" id="5_37n1j"]
+[ext_resource type="PackedScene" uid="uid://bfrywqebrkjld" path="res://scenes/props/toilet.tscn" id="6_n40tc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1s8p2"]
+texture = ExtResource("1_rluf0")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qgbex"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_1s8p2")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wfvdv"]
+load_path = "res://.godot/imported/Walls.png-00a044aaa606830627377d2df549f6b8.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpjw1"]
+texture = SubResource("CompressedTexture2D_wfvdv")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32.555298, -20.942791, -20.942791, -21.144163, 7.249428, -21.211288, 7.7192993, 7.7192984, 7.853546, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.065773, -32, -21.014015)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -7.6347237, 32, -7.2117043, -4.216074, -6.5460052, -21.468687, -32, -21.227776)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 7.905136, -32, 8.016087, 32, -32, 32)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.9673004, -32, 32, -32, 32, 32, -8.086212, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 7.8219223, -32, 8.043823, -8.321197, 32, -7.932873, 32, 32, -32, 32)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -8.122044, 32, -7.9773445, 32, 32, -32, 32)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.070557, -32, 32, -32, 32, 32, -32, 32, -32, -8.040825, -7.9596024, -8.122044)
+
+[sub_resource type="TileSet" id="TileSet_6miuk"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jpjw1")
+
+[node name="Apartament" type="Node2D" unique_id=1575735416]
+
+[node name="Floor" type="TileMapLayer" parent="." unique_id=1369042203]
+tile_map_data = PackedByteArray("AAAFAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAABAAAAAAABAAIAAAABAAAAAAACAAIAAAABAAAAAAADAAIAAAABAAAAAAAEAAIAAAABAAAAAAAFAAIAAAABAAAAAAAFAAAAAAABAAAAAAAEAAAAAAABAAAAAAADAAAAAAABAAAAAAACAAAAAAABAAAAAAABAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAABAAAAAAAEAAQAAAABAAAAAAADAAQAAAABAAAAAAACAAQAAAABAAAAAAABAAQAAAABAAAAAAAAAAQAAAABAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAABAAAAAAAEAAYAAAABAAAAAAADAAYAAAABAAAAAAACAAYAAAABAAAAAAABAAYAAAABAAAAAAAAAAYAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_qgbex")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=1472431010]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAFAAAAAAACAAAAAAAFAAYAAAACAAIAAAAAAAYAAAAAAAIAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAEAAAACAAEAAAAFAAIAAAACAAEAAAAFAAMAAAACAAEAAAAFAAQAAAACAAEAAAAFAAUAAAACAAEAAAAEAAYAAAABAAIAAAADAAYAAAABAAIAAAACAAYAAAABAAIAAAABAAYAAAABAAIAAAAAAAQAAAAAAAEAAAAAAAUAAAAAAAEAAAAAAAMAAAAAAAEAAAAAAAIAAAAAAAEAAAAAAAEAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_6miuk")
+
+[node name="Details" type="TileMapLayer" parent="." unique_id=1981581264]
+
+[node name="Props" type="Node2D" parent="." unique_id=350966518]
+
+[node name="ComputerDesk" parent="Props" unique_id=1614689853 instance=ExtResource("3_klbvn")]
+position = Vector2(314, 196)
+
+[node name="Bed" parent="Props" unique_id=241621288 instance=ExtResource("3_ns2m7")]
+position = Vector2(320, 378)
+
+[node name="Fridge" parent="Props" unique_id=584839540 instance=ExtResource("4_klbvn")]
+position = Vector2(261, 52)
+
+[node name="Stove" parent="Props" unique_id=2007257492 instance=ExtResource("5_37n1j")]
+position = Vector2(320, 54)
+
+[node name="Toilet" parent="Props" unique_id=40196682 instance=ExtResource("6_n40tc")]
+position = Vector2(68, 63)
