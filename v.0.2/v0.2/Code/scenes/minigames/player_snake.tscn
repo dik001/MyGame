@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/minigames/player_snake.gd" id="1_qj27a"]
+[ext_resource type="Texture2D" uid="uid://j4q7f2x31f5b" path="res://art/slithario/Food.png" id="2_bafdt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bn7fo"]
+radius = 22.0
+
+[node name="PlayerSnake" type="Node2D"]
+script = ExtResource("1_qj27a")
+
+[node name="HeadArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 5
+
+[node name="HeadSprite" type="Sprite2D" parent="HeadArea"]
+texture = ExtResource("2_bafdt")
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadArea"]
+shape = SubResource("CircleShape2D_bn7fo")
+
+[node name="BodyContainer" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.1, 1.1)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0

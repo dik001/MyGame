@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b34d54yno4n5b"]
+
+[ext_resource type="Texture2D" uid="uid://5t85esf6ec7q" path="res://tilesets/Door.png" id="1_yepiq"]
+[ext_resource type="Texture2D" uid="uid://bxl3m8trp62iy" path="res://tilesets/Door_Open.png" id="2_1qk8p"]
+[ext_resource type="Script" uid="uid://dk4hb6lwq8n46" path="res://scenes/props/Door.gd" id="3_nf4da"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbmyp"]
+size = Vector2(37, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vinnd"]
+size = Vector2(67, 89)
+
+[node name="Door" type="Node2D" unique_id=725529856]
+script = ExtResource("3_nf4da")
+closed_texture = ExtResource("1_yepiq")
+open_texture = ExtResource("2_1qk8p")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1586240334]
+texture = ExtResource("1_yepiq")
+
+[node name="WorldInteractableSideA" type="Node2D" parent="." unique_id=1219160197]
+position = Vector2(0, 19)
+
+[node name="WorldInteractableSideB" type="Node2D" parent="." unique_id=693246276]
+position = Vector2(0, -19)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1049214338]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1429414861]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_lbmyp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=21020744]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=872689599]
+position = Vector2(2.5, -11.5)
+shape = SubResource("RectangleShape2D_vinnd")

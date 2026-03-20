@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://cmms3ct6hsfp4"]
+
+[ext_resource type="PackedScene" uid="uid://bqqpjj4jk6jtm" path="res://scenes/rooms/apartament.tscn" id="1_ma5rq"]
+[ext_resource type="PackedScene" uid="uid://bbfjbt6df7mus" path="res://scenes/Characters/player.tscn" id="2_e3dby"]
+[ext_resource type="Texture2D" uid="uid://drydu4af46om2" path="res://art/ui/stats/Health.png" id="3_e3dby"]
+[ext_resource type="Texture2D" uid="uid://ce562lly2wcl" path="res://art/ui/stats/Food.png" id="4_gf1f2"]
+[ext_resource type="Texture2D" uid="uid://cdjk3dqxoy8hy" path="res://art/ui/stats/Energy.png" id="5_em1bs"]
+[ext_resource type="Script" uid="uid://d2px1sy4a03cr" path="res://scenes/main/hud.gd" id="6_hud"]
+[ext_resource type="FontFile" uid="uid://fpuc48rp77f2" path="res://art/ui/fonts/pixel_font.ttf" id="6_ktwa8"]
+[ext_resource type="PackedScene" path="res://scenes/ui/TimeWidget.tscn" id="7_time_widget"]
+[ext_resource type="AudioStream" uid="uid://bd67bjya55126" path="res://Music/music.mp3" id="8_kjrfb"]
+[ext_resource type="PackedScene" uid="uid://bktqt7goa6uyo" path="res://scenes/ui/InventoryUI.tscn" id="9_inventory_ui"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="10_theme"]
+[ext_resource type="Texture2D" uid="uid://ckijmwtyqpal5" path="res://art/ui/stats/Money.png" id="10_y58yt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_interaction_prompt"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.0941176, 0.0941176, 0.117647, 0.88)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.905882, 0.905882, 0.905882, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_interaction_key"]
+bg_color = Color(0.176471, 0.176471, 0.215686, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 0.75)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_currency_icon_panel"]
+
+[node name="Game" type="Node2D" unique_id=444367145]
+position = Vector2(-94, 8)
+
+[node name="Apartament" parent="." unique_id=1575735416 instance=ExtResource("1_ma5rq")]
+position = Vector2(522, 83)
+
+[node name="Player" parent="." unique_id=1217211118 instance=ExtResource("2_e3dby")]
+position = Vector2(873, 149)
+walk_tilemap_path = NodePath("../Apartament/Floor")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=172911088]
+script = ExtResource("6_hud")
+player_path = NodePath("../Player")
+
+[node name="root" type="Control" parent="HUD" unique_id=847127093]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_theme")
+
+[node name="InteractionPrompt" type="CenterContainer" parent="HUD/root" unique_id=802980529]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -96.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="PromptPanel" type="PanelContainer" parent="HUD/root/InteractionPrompt" unique_id=631078311]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_interaction_prompt")
+
+[node name="PromptRow" type="HBoxContainer" parent="HUD/root/InteractionPrompt/PromptPanel" unique_id=459661657]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="KeyPanel" type="PanelContainer" parent="HUD/root/InteractionPrompt/PromptPanel/PromptRow" unique_id=1852680650]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_interaction_key")
+
+[node name="KeyLabel" type="Label" parent="HUD/root/InteractionPrompt/PromptPanel/PromptRow/KeyPanel" unique_id=1110703635]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="HUD/root/InteractionPrompt/PromptPanel/PromptRow" unique_id=104965380]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Взаимодействие"
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD/root" unique_id=1137371655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/root/MarginContainer" unique_id=1015519143]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="TimeWidget" parent="HUD/root/MarginContainer/VBoxContainer" unique_id=705802201 instance=ExtResource("7_time_widget")]
+
+[node name="HealthRow" type="HBoxContainer" parent="HUD/root/MarginContainer/VBoxContainer" unique_id=2018389580]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HealthIcon" type="TextureRect" parent="HUD/root/MarginContainer/VBoxContainer/HealthRow" unique_id=1643959528]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("3_e3dby")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HealthLabel" type="Label" parent="HUD/root/MarginContainer/VBoxContainer/HealthRow" unique_id=1270554936]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_ktwa8")
+theme_override_font_sizes/font_size = 24
+text = "100"
+
+[node name="HungerRow" type="HBoxContainer" parent="HUD/root/MarginContainer/VBoxContainer" unique_id=781163192]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HungerIcon" type="TextureRect" parent="HUD/root/MarginContainer/VBoxContainer/HungerRow" unique_id=687008673]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("4_gf1f2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HungerLabel" type="Label" parent="HUD/root/MarginContainer/VBoxContainer/HungerRow" unique_id=1706627368]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "100"
+
+[node name="EnergyRow" type="HBoxContainer" parent="HUD/root/MarginContainer/VBoxContainer" unique_id=1813376802]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="EnergyIcon" type="TextureRect" parent="HUD/root/MarginContainer/VBoxContainer/EnergyRow" unique_id=1936769529]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_em1bs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EnergyLabel" type="Label" parent="HUD/root/MarginContainer/VBoxContainer/EnergyRow" unique_id=1788845184]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "100"
+
+[node name="CurrencyRow" type="HBoxContainer" parent="HUD/root/MarginContainer/VBoxContainer" unique_id=2007719843]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="CurrencyIconPanel" type="PanelContainer" parent="HUD/root/MarginContainer/VBoxContainer/CurrencyRow" unique_id=2138364084]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_currency_icon_panel")
+
+[node name="CurrencyIcon" type="TextureRect" parent="HUD/root/MarginContainer/VBoxContainer/CurrencyRow/CurrencyIconPanel" unique_id=1249929058]
+layout_mode = 2
+texture = ExtResource("10_y58yt")
+stretch_mode = 5
+
+[node name="DollarsLabel" type="Label" parent="HUD/root/MarginContainer/VBoxContainer/CurrencyRow" unique_id=173193860]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "25"
+
+[node name="InventoryUI" parent="." unique_id=2112193501 instance=ExtResource("9_inventory_ui")]
+player_path = NodePath("../Player")
+hud_path = NodePath("../HUD")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1643929412]
+stream = ExtResource("8_kjrfb")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true

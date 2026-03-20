@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://bktqt7goa6uyo"]
+
+[ext_resource type="Script" uid="uid://baya1ivu7c7qa" path="res://scenes/ui/InventoryUI.gd" id="1_inventory_ui"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=1658347844]
+layer = 6
+script = ExtResource("1_inventory_ui")
+
+[node name="Overlay" type="Control" parent="." unique_id=2085812689]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("2_theme")
+
+[node name="Dimmer" type="ColorRect" parent="Overlay" unique_id=1796831098]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0156863, 0.0313726, 0.52)
+
+[node name="CenterContainer" type="CenterContainer" parent="Overlay" unique_id=1764151594]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Overlay/CenterContainer" unique_id=2129166312]
+custom_minimum_size = Vector2(1040, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/PanelContainer" unique_id=1757685969]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Content" type="VBoxContainer" parent="Overlay/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Инвентарь"
+
+[node name="HintLabel" type="Label" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "I или Esc - закрыть окно"
+
+[node name="HeaderPanel" type="PanelContainer" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content"]
+layout_mode = 2
+
+[node name="HeaderRow" type="HBoxContainer" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/HeaderPanel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconHeader" type="Control" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+
+[node name="NameHeader" type="Label" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/HeaderPanel/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+text = "Название"
+
+[node name="WeightHeader" type="Label" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+text = "Вес"
+horizontal_alignment = 2
+
+[node name="QuantityHeader" type="Label" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+text = "Кол-во"
+horizontal_alignment = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content"]
+custom_minimum_size = Vector2(0, 456)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RowsContainer" type="VBoxContainer" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="EmptyLabel" type="Label" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content"]
+custom_minimum_size = Vector2(0, 160)
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Инвентарь пуст"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FooterRow" type="HBoxContainer" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TotalWeightLabel" type="Label" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/FooterRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Общий вес: 0.0"
+vertical_alignment = 1
+
+[node name="UseButton" type="Button" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/FooterRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Использовать"
+
+[node name="DropButton" type="Button" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/FooterRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Выбросить"
+
+[node name="CloseButton" type="Button" parent="Overlay/CenterContainer/PanelContainer/MarginContainer/Content/FooterRow"]
+custom_minimum_size = Vector2(170, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Закрыть"
