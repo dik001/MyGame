@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/freelance/FreelanceHistoryItem.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_history_panel"]
+bg_color = Color(0.0509804, 0.0784314, 0.121569, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.294118, 0.396078, 0.513726, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[node name="FreelanceHistoryItem" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_theme")
+theme_override_styles/panel = SubResource("StyleBoxFlat_history_panel")
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Заказ"
+
+[node name="MetaLabel" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+text = "Результат: нормально  •  Точность: 100%  •  Время: 0м"

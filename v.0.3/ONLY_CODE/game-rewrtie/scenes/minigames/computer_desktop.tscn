@@ -1,0 +1,241 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://scenes/minigames/computer_desktop.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://art/slithario/slithario.png" id="2_slithario_icon"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="3_theme"]
+[ext_resource type="PackedScene" path="res://scenes/ui/shop_window.tscn" id="4_shop_window"]
+[ext_resource type="PackedScene" path="res://scenes/ui/delivery_tracker_window.tscn" id="5_delivery_window"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="6_placeholder_icon"]
+[ext_resource type="Resource" path="res://resources/items/apple.tres" id="7_apple"]
+[ext_resource type="Resource" path="res://resources/items/banana.tres" id="8_banana"]
+[ext_resource type="Resource" path="res://resources/items/bread.tres" id="9_bread"]
+[ext_resource type="Resource" path="res://resources/items/canned_food.tres" id="10_canned_food"]
+[ext_resource type="Resource" path="res://resources/items/cheese.tres" id="11_cheese"]
+[ext_resource type="Resource" path="res://resources/items/noodles.tres" id="12_noodles"]
+[ext_resource type="Resource" path="res://resources/items/egg.tres" id="13_egg"]
+[ext_resource type="Resource" path="res://resources/items/meat.tres" id="14_meat"]
+[ext_resource type="Resource" path="res://resources/items/milk.tres" id="15_milk"]
+[ext_resource type="Resource" path="res://resources/items/sausage.tres" id="16_sausage"]
+
+[node name="ComputerDesktop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_theme")
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.113725, 0.254902, 0.27451, 1)
+
+[node name="DesktopRoot" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Taskbar" type="Panel" parent="DesktopRoot"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TaskbarLabel" type="Label" parent="DesktopRoot/Taskbar"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 340.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 28
+text = "Компьютер"
+
+[node name="HintLabel" type="Label" parent="DesktopRoot/Taskbar"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_top = 24.0
+offset_right = -20.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 2
+text = "Esc - выйти"
+
+[node name="ShortcutLayer" type="Control" parent="DesktopRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlitharioShortcut" type="Control" parent="DesktopRoot/ShortcutLayer"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 26.0
+offset_right = 156.0
+offset_bottom = 166.0
+
+[node name="SlitharioIconButton" type="TextureButton" parent="DesktopRoot/ShortcutLayer/SlitharioShortcut"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("2_slithario_icon")
+texture_hover = ExtResource("2_slithario_icon")
+texture_pressed = ExtResource("2_slithario_icon")
+stretch_mode = 3
+
+[node name="SlitharioLabel" type="Label" parent="DesktopRoot/ShortcutLayer/SlitharioShortcut"]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+text = "Slithario"
+
+[node name="ShopShortcut" type="Control" parent="DesktopRoot/ShortcutLayer"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 190.0
+offset_right = 156.0
+offset_bottom = 330.0
+
+[node name="ShopIconButton" type="TextureButton" parent="DesktopRoot/ShortcutLayer/ShopShortcut"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("6_placeholder_icon")
+texture_hover = ExtResource("6_placeholder_icon")
+texture_pressed = ExtResource("6_placeholder_icon")
+stretch_mode = 3
+
+[node name="ShopLabel" type="Label" parent="DesktopRoot/ShortcutLayer/ShopShortcut"]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+text = "Магазин"
+
+[node name="DeliveryShortcut" type="Control" parent="DesktopRoot/ShortcutLayer"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 354.0
+offset_right = 156.0
+offset_bottom = 494.0
+
+[node name="DeliveryIconButton" type="TextureButton" parent="DesktopRoot/ShortcutLayer/DeliveryShortcut"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("6_placeholder_icon")
+texture_hover = ExtResource("6_placeholder_icon")
+texture_pressed = ExtResource("6_placeholder_icon")
+stretch_mode = 3
+
+[node name="DeliveryLabel" type="Label" parent="DesktopRoot/ShortcutLayer/DeliveryShortcut"]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+text = "Доставка"
+
+[node name="FreelanceShortcut" type="Control" parent="DesktopRoot/ShortcutLayer"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 518.0
+offset_right = 156.0
+offset_bottom = 658.0
+
+[node name="FreelanceIconButton" type="TextureButton" parent="DesktopRoot/ShortcutLayer/FreelanceShortcut"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("6_placeholder_icon")
+texture_hover = ExtResource("6_placeholder_icon")
+texture_pressed = ExtResource("6_placeholder_icon")
+stretch_mode = 3
+
+[node name="FreelanceLabel" type="Label" parent="DesktopRoot/ShortcutLayer/FreelanceShortcut"]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+text = "Фриланс"
+
+[node name="BankShortcut" type="Control" parent="DesktopRoot/ShortcutLayer"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 682.0
+offset_right = 156.0
+offset_bottom = 822.0
+
+[node name="BankIconButton" type="TextureButton" parent="DesktopRoot/ShortcutLayer/BankShortcut"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("6_placeholder_icon")
+texture_hover = ExtResource("6_placeholder_icon")
+texture_pressed = ExtResource("6_placeholder_icon")
+stretch_mode = 3
+
+[node name="BankLabel" type="Label" parent="DesktopRoot/ShortcutLayer/BankShortcut"]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+text = "Банк"
+
+[node name="WindowsLayer" type="Control" parent="DesktopRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ShopWindow" parent="DesktopRoot/WindowsLayer" instance=ExtResource("4_shop_window")]
+offset_left = 420.0
+offset_top = 108.0
+offset_right = 1460.0
+offset_bottom = 828.0
+catalog = [ExtResource("7_apple"), ExtResource("8_banana"), ExtResource("9_bread"), ExtResource("10_canned_food"), ExtResource("11_cheese"), ExtResource("12_noodles"), ExtResource("13_egg"), ExtResource("14_meat"), ExtResource("15_milk"), ExtResource("16_sausage")]
+
+[node name="DeliveryTrackerWindow" parent="DesktopRoot/WindowsLayer" instance=ExtResource("5_delivery_window")]
+offset_left = 420.0
+offset_top = 108.0
+offset_right = 1460.0
+offset_bottom = 828.0

@@ -1,0 +1,449 @@
+[gd_scene load_steps=12 format=3 uid="uid://bktqt7goa6uyo"]
+
+[ext_resource type="Script" uid="uid://baya1ivu7c7qa" path="res://scenes/ui/InventoryUI.gd" id="1_inventory_ui"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_window_panel"]
+bg_color = Color(0.0313726, 0.0470588, 0.0862745, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.494118, 0.623529, 0.819608, 1)
+corner_detail = 1
+anti_aliasing = false
+shadow_color = Color(0, 0, 0, 0.32)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_left_menu_panel"]
+bg_color = Color(0.0431373, 0.0666667, 0.113725, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.341176, 0.470588, 0.654902, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_content_panel"]
+bg_color = Color(0.0509804, 0.0784314, 0.12549, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.419608, 0.576471, 0.780392, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_normal"]
+bg_color = Color(0.0666667, 0.101961, 0.156863, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.270588, 0.392157, 0.564706, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_hover"]
+bg_color = Color(0.0941176, 0.137255, 0.211765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.580392, 0.717647, 0.905882, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_pressed"]
+bg_color = Color(0.137255, 0.203922, 0.305882, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.768627, 0.898039, 1, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_disabled"]
+bg_color = Color(0.0509804, 0.0784314, 0.12549, 0.78)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.211765, 0.301961, 0.431373, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inventory_header"]
+bg_color = Color(0.0588235, 0.0901961, 0.141176, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.356863, 0.482353, 0.658824, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_status_list_panel"]
+bg_color = Color(0.0588235, 0.0901961, 0.141176, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.419608, 0.576471, 0.780392, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_status_details_panel"]
+bg_color = Color(0.0627451, 0.0941176, 0.14902, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.501961, 0.654902, 0.858824, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=1658347844]
+layer = 6
+script = ExtResource("1_inventory_ui")
+
+[node name="Overlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("2_theme")
+
+[node name="Dimmer" type="ColorRect" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0156863, 0.0313726, 0.56)
+
+[node name="CenterContainer" type="CenterContainer" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WindowPanel" type="PanelContainer" parent="Overlay/CenterContainer"]
+custom_minimum_size = Vector2(1140, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_window_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="WindowLayout" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="MainRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="LeftMenuPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_left_menu_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="LeftMenu" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel/MarginContainer/LeftMenu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Разделы"
+
+[node name="HintLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel/MarginContainer/LeftMenu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+text = "I или Esc - закрыть окно"
+
+[node name="MenuSpacer" type="Control" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel/MarginContainer/LeftMenu"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="TabButton_Inventory" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel/MarginContainer/LeftMenu"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_tab_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tab_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tab_pressed")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_tab_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tab_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tab_disabled")
+toggle_mode = true
+text = "Инвентарь"
+
+[node name="TabButton_Status" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel/MarginContainer/LeftMenu"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_tab_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tab_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tab_pressed")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_tab_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_tab_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_tab_disabled")
+toggle_mode = true
+text = "Состояние"
+
+[node name="MenuFill" type="Control" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/LeftMenuPanel/MarginContainer/LeftMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ContentPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_content_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 22
+
+[node name="PagesContainer" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InventoryPage" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="PageTitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Инвентарь"
+
+[node name="HeaderPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_inventory_header")
+
+[node name="HeaderRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage/HeaderPanel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconHeader" type="Control" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+
+[node name="NameHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage/HeaderPanel/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+text = "Название"
+
+[node name="WeightHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+text = "Вес"
+horizontal_alignment = 2
+
+[node name="QuantityHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+text = "Кол-во"
+horizontal_alignment = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage"]
+custom_minimum_size = Vector2(0, 470)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RowsContainer" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="EmptyLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/InventoryPage"]
+custom_minimum_size = Vector2(0, 160)
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Инвентарь пуст"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusPage" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="HeaderLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Состояние"
+
+[node name="GeneralConditionLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "Общее состояние: стабильное"
+
+[node name="MainRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="ConditionListPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow"]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_status_list_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionListPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="ConditionListContent" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionListPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="ConditionListTitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionListPanel/MarginContainer/ConditionListContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Активные состояния"
+
+[node name="ConditionScroll" type="ScrollContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionListPanel/MarginContainer/ConditionListContent"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ConditionList" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionListPanel/MarginContainer/ConditionListContent/ConditionScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="EmptyConditionsLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionListPanel/MarginContainer/ConditionListContent"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "Активных состояний нет"
+
+[node name="ConditionDetailsPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_status_details_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionDetailsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ConditionDetailsContent" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionDetailsPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="ConditionDetailsTitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionDetailsPanel/MarginContainer/ConditionDetailsContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Подробности"
+
+[node name="SelectedConditionTitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionDetailsPanel/MarginContainer/ConditionDetailsContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+text = "Серьёзных проблем не обнаружено"
+
+[node name="SelectedConditionStatusLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionDetailsPanel/MarginContainer/ConditionDetailsContent"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.941176, 0.839216, 0.560784, 1)
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = ""
+
+[node name="SelectedConditionDescriptionLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/MainRow/ContentPanel/MarginContainer/PagesContainer/StatusPage/MainRow/ConditionDetailsPanel/MarginContainer/ConditionDetailsContent"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "Сейчас активных состояний нет. Можно продолжать день в обычном режиме."
+
+[node name="FooterRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TotalWeightLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/FooterRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Общий вес: 0.0"
+vertical_alignment = 1
+
+[node name="FooterSpacer" type="Control" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/FooterRow"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="UseButton" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/FooterRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Использовать"
+
+[node name="DropButton" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/FooterRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Выбросить"
+
+[node name="CloseButton" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/WindowLayout/FooterRow"]
+custom_minimum_size = Vector2(170, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Закрыть"

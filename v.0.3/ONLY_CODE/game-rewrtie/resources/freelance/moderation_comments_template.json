@@ -1,0 +1,3602 @@
+[
+  {
+    "text": "Только для своих: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Боже, это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Мда, ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Даркнет шоп: заказать ддос атаку на любой сайт конкурента.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Ребята, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас ставки с гарантией прибыли",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, какой у тебя ранг?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ребята, молодец, так держать.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Привет всем, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Смотрю давно, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заработок, получи 1000 рублей на карту",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Просто ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только для своих: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Привет всем, молодец, так держать.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Привет всем, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Кликай, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заработок, накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Добрый вечер, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, получи 1000 рублей на карту",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, получи 1000 рублей на карту",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ребята, какие планы на завтра?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Слушай, у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, как пройти босса?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Подпишись, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Добрый вечер, какой у тебя ранг?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: заказать ддос атаку на любой сайт конкурента.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Заходи, лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Добрый вечер, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Ребята, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Добрый вечер, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Слушай, смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ребята, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, ты полный нуб.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, какой у тебя ранг?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, какие планы на завтра?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Слушай, ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, ставки с гарантией прибыли",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, ставки с гарантией прибыли",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Классно, молодец, так держать.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: услуги взлома почты и социальных сетей на заказ.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Чувак, отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Привет всем, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, как пройти босса?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Теневой форум: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Только для своих: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Черный рынок: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Только для своих: инструкции по созданию самодельных взрывных устройств дома.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Секретный чат: инструкции по созданию самодельных взрывных устройств дома.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Отлично, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Только сейчас раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Слушай, ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, какие планы на завтра?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Просто твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заработок, взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Классно, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, молодец, так держать.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Добрый вечер, какие планы на завтра?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заработок, забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Привет всем, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Привет всем, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ребята, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, ставки с гарантией прибыли",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только для своих: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Боже, смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Даркнет шоп: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Переходи, получи 1000 рублей на карту",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: инструкции по созданию самодельных взрывных устройств дома.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Срочно забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Секретный чат: услуги взлома почты и социальных сетей на заказ.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Честно, у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Добрый вечер, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Классно, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только для своих: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Классно, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас получи 1000 рублей на карту",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Только для своих: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Без цензуры: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Какой же ты отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, как пройти босса?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ребята, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Халява, покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: услуги взлома почты и социальных сетей на заказ.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Привет всем, какой у тебя ранг?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: инструкции по созданию самодельных взрывных устройств дома.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: заказать ддос атаку на любой сайт конкурента.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Блин, иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, получи 1000 рублей на карту",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, какие планы на завтра?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Просто иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Слушай, хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Кликай, накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Просто смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только сейчас лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Классно, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно ставки с гарантией прибыли",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, как пройти босса?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Смотрю давно, молодец, так держать.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Добрый вечер, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: инструкции по созданию самодельных взрывных устройств дома.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Просто удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подпишись, покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Даркнет шоп: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Слушай, ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Заработок, выиграй айфон сегодня",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, молодец, так держать.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Привет всем, как пройти босса?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: услуги взлома почты и социальных сетей на заказ.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Внимание, раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, какой у тебя ранг?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: инструкции по созданию самодельных взрывных устройств дома.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Стример, удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, ты полный нуб.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Привет всем, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: инструкции по созданию самодельных взрывных устройств дома.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Ого, как пройти босса?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: услуги взлома почты и социальных сетей на заказ.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Слушай, это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заработок, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Внимание, накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, ставки с гарантией прибыли",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Нелегально: заказать ддос атаку на любой сайт конкурента.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Классно, какой у тебя ранг?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Нелегально: услуги взлома почты и социальных сетей на заказ.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Блин, у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Чат, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Привет всем, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, молодец, так держать.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, ты полный нуб.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ребята, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Анонимно: заказать ддос атаку на любой сайт конкурента.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, что за музыка на фоне?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Добрый вечер, очень атмосферно.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Даркнет шоп: услуги взлома почты и социальных сетей на заказ.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Добрый вечер, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Просто у тебя руки кривые.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, ты полная бездарность.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Классно, как пройти босса?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально ты полный нуб.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, ты полный нуб.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Бесплатно, читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, ты полный нуб.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, какой у тебя ранг?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Слушай, удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Даркнет шоп: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Стример, хороший выстрел.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Слушай, отписываюсь от этого бреда.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Срочно раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Реально ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Классно, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: схемы обмана казино со стопроцентной гарантией выигрыша.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Закрытый канал: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Ого, как настроение?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, получи 1000 рублей на карту",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Какой же ты удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Переходи, легкие деньги тут",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заработок, раздаю промокоды",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, ты играешь как бот.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Мда, иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Без цензуры: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Только для своих: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Стример, хватит тупить на ровном месте.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Теневой форум: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Нелегально: жесткое порно и интимные фото без ограничений.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ого, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Честно, это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, лучший бот для твича",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Ребята, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, накрутка зрителей недорого",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чувак, это позорный стрим.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Секретный чат: заказать ддос атаку на любой сайт конкурента.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Боже, удали игру не позорься.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: слив баз данных кредитных карт с пин кодами.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Ого, красивая графика тут.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Блин, твой чат для идиотов.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Черный рынок: продажа шпионского оборудования и скрытых камер недорого.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Теневой форум: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Даркнет шоп: отмывание криптовалюты через надежные анонимные миксеры.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, отличная игра!",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Подскажите, удачи в катке.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Слушай, иди лучше спи.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Смотрю давно, какие планы на завтра?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Закрытый канал: продажа фальшивых паспортов и прав.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Скрытая ссылка: краденые аккаунты с привязанными банковскими картами оптом.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Заработок, скачай читы без бана",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Боже, ужасный голос, выключи микрофон.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Чат, какие планы на завтра?",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Стример, смотреть на это тошно.",
+    "category": "insult",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Анонимно: купить запрещенные вещества с доставкой закладкой.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Халява, забирай бонус в профиле",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Заходи, покупай аккаунты дешево",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Кликай, ставки с гарантией прибыли",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Бесплатно, взаимная подписка всем",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Отлично, скиньте ссылку на игру.",
+    "category": "safe",
+    "should_reject": false,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  },
+  {
+    "text": "Только для своих: купить боевое оружие без лицензии и документов.",
+    "category": "forbidden",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "long"
+    ]
+  },
+  {
+    "text": "Заработок, читай закреп",
+    "category": "spam",
+    "should_reject": true,
+    "tags": [
+      "stream_chat",
+      "short"
+    ]
+  }
+]

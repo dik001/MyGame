@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/StatusConditionRow.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_normal"]
+bg_color = Color(0.0666667, 0.101961, 0.156863, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.333333, 0.458824, 0.643137, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_hover"]
+bg_color = Color(0.0941176, 0.137255, 0.211765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.584314, 0.72549, 0.913725, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_pressed"]
+bg_color = Color(0.137255, 0.203922, 0.305882, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.776471, 0.901961, 1, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_disabled"]
+bg_color = Color(0.0588235, 0.0901961, 0.141176, 0.8)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.247059, 0.341176, 0.470588, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[node name="StatusConditionRow" type="Button"]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+mouse_default_cursor_shape = 2
+text = ""
+theme = ExtResource("2_theme")
+theme_override_styles/normal = SubResource("StyleBoxFlat_row_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_row_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_row_pressed")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_row_pressed")
+theme_override_styles/focus = SubResource("StyleBoxFlat_row_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_row_disabled")
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 22
+text = "Состояние"
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/Content"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.941176, 0.839216, 0.560784, 1)
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+text = "Активно"
