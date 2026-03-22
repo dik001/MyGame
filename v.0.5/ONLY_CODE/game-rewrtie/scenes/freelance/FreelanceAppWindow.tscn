@@ -1,0 +1,282 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/freelance/FreelanceAppWindow.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_section_panel"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.0470588, 0.0823529, 0.133333, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.368627, 0.470588, 0.596078, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_workday_panel"]
+content_margin_left = 18.0
+content_margin_top = 12.0
+content_margin_right = 18.0
+content_margin_bottom = 12.0
+bg_color = Color(0.0823529, 0.12549, 0.188235, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.596078, 0.705882, 0.847059, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[node name="FreelanceAppWindow" type="PanelContainer"]
+visible = false
+custom_minimum_size = Vector2(1180, 760)
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -590.0
+offset_top = -380.0
+offset_right = 590.0
+offset_bottom = 380.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HeaderRow" type="HBoxContainer" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/Content/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "Фриланс"
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/Content/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+text = "Уровень: 1"
+
+[node name="XpLabel" type="Label" parent="MarginContainer/Content/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+text = "XP: 0 / 25"
+
+[node name="RatingLabel" type="Label" parent="MarginContainer/Content/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+text = "Рейтинг: 50/100"
+
+[node name="CompletedTodayLabel" type="Label" parent="MarginContainer/Content/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+text = "Сегодня: 0/2"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/Content/HeaderRow"]
+custom_minimum_size = Vector2(176, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Закрыть"
+
+[node name="WorkdayPanel" type="PanelContainer" parent="MarginContainer/Content"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_workday_panel")
+
+[node name="WorkdayStateLabel" type="Label" parent="MarginContainer/Content/WorkdayPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Доступно 2 заказа"
+
+[node name="ContentRow" type="HBoxContainer" parent="MarginContainer/Content"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="OrdersPanel" type="PanelContainer" parent="MarginContainer/Content/ContentRow"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_section_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Content/ContentRow/OrdersPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="OrdersColumn" type="VBoxContainer" parent="MarginContainer/Content/ContentRow/OrdersPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="OrdersTitleLabel" type="Label" parent="MarginContainer/Content/ContentRow/OrdersPanel/MarginContainer/OrdersColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Заказы на сегодня"
+
+[node name="OrdersScroll" type="ScrollContainer" parent="MarginContainer/Content/ContentRow/OrdersPanel/MarginContainer/OrdersColumn"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="OrdersList" type="VBoxContainer" parent="MarginContainer/Content/ContentRow/OrdersPanel/MarginContainer/OrdersColumn/OrdersScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="EmptyOrdersLabel" type="Label" parent="MarginContainer/Content/ContentRow/OrdersPanel/MarginContainer/OrdersColumn"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "Список заказов пуст."
+
+[node name="DetailsPanel" type="PanelContainer" parent="MarginContainer/Content/ContentRow"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_section_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Content/ContentRow/DetailsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="DetailsColumn" type="VBoxContainer" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="DetailsTitleLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Детали заказа"
+
+[node name="SelectedTitleLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+autowrap_mode = 3
+text = "Выберите заказ"
+
+[node name="SelectedDifficultyLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Сложность: -"
+
+[node name="SelectedCommentsLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Комментарии: -"
+
+[node name="SelectedDurationLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Время: -"
+
+[node name="SelectedEnergyLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "Энергия: -"
+
+[node name="SelectedRewardLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "Оплата: -"
+
+[node name="SelectedUrgentLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Срочность: -"
+
+[node name="SelectedDayLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Выдано: -"
+
+[node name="SelectedAvailabilityLabel" type="Label" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "Статус: -"
+
+[node name="DetailsSpacer" type="Control" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StartOrderButton" type="Button" parent="MarginContainer/Content/ContentRow/DetailsPanel/MarginContainer/DetailsColumn"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Начать заказ"
+
+[node name="HistoryPanel" type="PanelContainer" parent="MarginContainer/Content"]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_section_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Content/HistoryPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="HistorySection" type="VBoxContainer" parent="MarginContainer/Content/HistoryPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HistoryTitleLabel" type="Label" parent="MarginContainer/Content/HistoryPanel/MarginContainer/HistorySection"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Недавняя история"
+
+[node name="HistoryScroll" type="ScrollContainer" parent="MarginContainer/Content/HistoryPanel/MarginContainer/HistorySection"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HistoryList" type="VBoxContainer" parent="MarginContainer/Content/HistoryPanel/MarginContainer/HistorySection/HistoryScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="EmptyHistoryLabel" type="Label" parent="MarginContainer/Content/HistoryPanel/MarginContainer/HistorySection"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3
+text = "История пока пуста."
