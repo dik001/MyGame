@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/apps/LeChatMessageBubble.gd" id="1_script"]
+
+[node name="LeChatMessageBubble" type="Control"]
+custom_minimum_size = Vector2(0, 92)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("1_script")
+
+[node name="AlignmentRow" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="LeftSpacer" type="Control" parent="AlignmentRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.24
+
+[node name="BubbleHolder" type="VBoxContainer" parent="AlignmentRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.08
+
+[node name="BubblePanel" type="PanelContainer" parent="AlignmentRow/BubbleHolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BubbleMargin" type="MarginContainer" parent="AlignmentRow/BubbleHolder/BubblePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="BubbleContent" type="VBoxContainer" parent="AlignmentRow/BubbleHolder/BubblePanel/BubbleMargin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SenderLabel" type="Label" parent="AlignmentRow/BubbleHolder/BubblePanel/BubbleMargin/BubbleContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Арендодатель"
+
+[node name="MessageLabel" type="Label" parent="AlignmentRow/BubbleHolder/BubblePanel/BubbleMargin/BubbleContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 3
+text = "Текст сообщения"
+
+[node name="MetaLabel" type="Label" parent="AlignmentRow/BubbleHolder/BubblePanel/BubbleMargin/BubbleContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "День 1 - 07:25"
+
+[node name="RightSpacer" type="Control" parent="AlignmentRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.76

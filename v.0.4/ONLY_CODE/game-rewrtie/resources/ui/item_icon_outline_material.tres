@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://resources/ui/item_icon_outline.gdshader" id="1_shader"]
+
+[resource]
+shader = ExtResource("1_shader")
+shader_parameter/outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+shader_parameter/outline_size = 1.4

@@ -1,0 +1,314 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scenes/apps/LeChatWindow.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_window"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+bg_color = Color(0.0196078, 0.0431373, 0.0705882, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.192157, 0.423529, 0.505882, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sidebar"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.027451, 0.0627451, 0.0941176, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.137255, 0.317647, 0.388235, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.0431373, 0.0980392, 0.14902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.254902, 0.533333, 0.631373, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_messages"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.0156863, 0.0392157, 0.0666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.141176, 0.305882, 0.380392, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_input"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.0313726, 0.0745098, 0.113725, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.184314, 0.415686, 0.505882, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_search"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.0392157, 0.0862745, 0.129412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.211765, 0.466667, 0.564706, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 1
+anti_aliasing = false
+
+[node name="LeChatWindow" type="PanelContainer"]
+visible = false
+custom_minimum_size = Vector2(1320, 780)
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -660.0
+offset_top = -390.0
+offset_right = 660.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+theme_override_styles/panel = SubResource("StyleBoxFlat_window")
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="RootPanel" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="SidebarPanel" type="PanelContainer" parent="MarginContainer/RootPanel"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_sidebar")
+
+[node name="SidebarMargin" type="MarginContainer" parent="MarginContainer/RootPanel/SidebarPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="SidebarContent" type="VBoxContainer" parent="MarginContainer/RootPanel/SidebarPanel/SidebarMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="SearchPanel" type="PanelContainer" parent="MarginContainer/RootPanel/SidebarPanel/SidebarMargin/SidebarContent"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_search")
+
+[node name="SearchMargin" type="MarginContainer" parent="MarginContainer/RootPanel/SidebarPanel/SidebarMargin/SidebarContent/SearchPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="SearchLineEdit" type="LineEdit" parent="MarginContainer/RootPanel/SidebarPanel/SidebarMargin/SidebarContent/SearchPanel/SearchMargin"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+placeholder_text = "Поиск чатов"
+
+[node name="ChatListScroll" type="ScrollContainer" parent="MarginContainer/RootPanel/SidebarPanel/SidebarMargin/SidebarContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChatListContainer" type="VBoxContainer" parent="MarginContainer/RootPanel/SidebarPanel/SidebarMargin/SidebarContent/ChatListScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="EmptyChatListLabel" type="Label" parent="MarginContainer/RootPanel/SidebarPanel/SidebarMargin/SidebarContent"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 3
+text = "Чатов пока нет"
+
+[node name="MainChatPanel" type="PanelContainer" parent="MarginContainer/RootPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_sidebar")
+
+[node name="MainChatMargin" type="MarginContainer" parent="MarginContainer/RootPanel/MainChatPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MainChatContent" type="VBoxContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="HeaderPanel" type="PanelContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_header")
+
+[node name="HeaderMargin" type="MarginContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HeaderRow" type="HBoxContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel/HeaderMargin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HeaderText" type="VBoxContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel/HeaderMargin/HeaderRow"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="ChatNameLabel" type="Label" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel/HeaderMargin/HeaderRow/HeaderText"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Арендодатель"
+
+[node name="StatusLabel" type="Label" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel/HeaderMargin/HeaderRow/HeaderText"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Диалог по аренде"
+
+[node name="HeaderSpacer" type="Control" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel/HeaderMargin/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionalActionButton_PayRent" type="Button" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel/HeaderMargin/HeaderRow"]
+visible = false
+custom_minimum_size = Vector2(220, 54)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Оплатить аренду"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/HeaderPanel/HeaderMargin/HeaderRow"]
+custom_minimum_size = Vector2(168, 54)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Закрыть"
+
+[node name="MessagesPanel" type="PanelContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_messages")
+
+[node name="MessagesMargin" type="MarginContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/MessagesPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="MessagesScroll" type="ScrollContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/MessagesPanel/MessagesMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MessagesContainer" type="VBoxContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/MessagesPanel/MessagesMargin/MessagesScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="BottomInputPanel" type="PanelContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_input")
+
+[node name="BottomInputMargin" type="MarginContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/BottomInputPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="BottomInputRow" type="HBoxContainer" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/BottomInputPanel/BottomInputMargin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MessageLineEdit" type="LineEdit" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/BottomInputPanel/BottomInputMargin/BottomInputRow"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Напишите сообщение..."
+
+[node name="SendButton" type="Button" parent="MarginContainer/RootPanel/MainChatPanel/MainChatMargin/MainChatContent/BottomInputPanel/BottomInputMargin/BottomInputRow"]
+custom_minimum_size = Vector2(176, 54)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Отправить"

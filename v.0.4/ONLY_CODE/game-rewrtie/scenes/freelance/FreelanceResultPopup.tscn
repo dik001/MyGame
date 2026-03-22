@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/freelance/FreelanceResultPopup.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_result_panel"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+bg_color = Color(0.0392157, 0.0666667, 0.105882, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.486275, 0.619608, 0.811765, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_continue_button"]
+bg_color = Color(0.14902, 0.294118, 0.184314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.52549, 0.796078, 0.572549, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[node name="FreelanceResultPopup" type="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0, 0, 0, 0.70)
+
+[node name="Panel" type="PanelContainer" parent="Dim"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -220.0
+offset_right = 260.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_result_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dim/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 22
+
+[node name="Content" type="VBoxContainer" parent="Dim/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+autowrap_mode = 3
+text = "Результат заказа"
+
+[node name="StatusLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Статус: выполнено"
+
+[node name="AccuracyLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Точность: 0%"
+
+[node name="RewardLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Выплата: $0"
+
+[node name="EnergySpentLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Энергия: -0"
+
+[node name="TimeSpentLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Рабочее время: 0м"
+
+[node name="RatingDeltaLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Рейтинг: +0"
+
+[node name="XpGainLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Опыт: +0 XP"
+
+[node name="Spacer" type="Control" parent="Dim/Panel/MarginContainer/Content"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="Dim/Panel/MarginContainer/Content"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_continue_button")
+theme_override_styles/hover = SubResource("StyleBoxFlat_continue_button")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_continue_button")
+theme_override_styles/focus = SubResource("StyleBoxFlat_continue_button")
+text = "Продолжить"
