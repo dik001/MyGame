@@ -1,0 +1,14 @@
+StaticBody2D
+CollisionShape2D
+Area2D
+Sprite2D
+AnimatedSprite2D
+AnimatableBody2D
+CharacterBody2D
+TileMapLayer
+WorldInteractable
+AudioStreamPlayer
+TextureRect
+Control
+CanvasLayer
+ColorRect

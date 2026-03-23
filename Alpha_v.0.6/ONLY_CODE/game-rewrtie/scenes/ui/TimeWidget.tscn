@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/TimeWidget.gd" id="1_time_widget"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[node name="TimeWidget" type="Control"]
+custom_minimum_size = Vector2(256, 120)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_time_widget")
+
+[node name="Panel" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 120.0
+mouse_filter = 2
+
+[node name="HourTens" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 68.0
+offset_bottom = 104.0
+mouse_filter = 2
+
+[node name="HourOnes" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 16.0
+offset_right = 116.0
+offset_bottom = 104.0
+mouse_filter = 2
+
+[node name="Colon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 104.0
+mouse_filter = 2
+
+[node name="MinuteTens" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 16.0
+offset_right = 188.0
+offset_bottom = 104.0
+mouse_filter = 2
+
+[node name="MinuteOnes" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 16.0
+offset_right = 236.0
+offset_bottom = 104.0
+mouse_filter = 2

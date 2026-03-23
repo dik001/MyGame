@@ -1,0 +1,242 @@
+[gd_scene format=3 load_steps=5]
+
+[ext_resource type="Script" path="res://scenes/story/runa_prologue.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phone"]
+content_margin_left = 16.0
+content_margin_top = 14.0
+content_margin_right = 16.0
+content_margin_bottom = 14.0
+bg_color = Color(0.054902, 0.0588235, 0.0745098, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.792157, 0.792157, 0.862745, 0.8)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_story_panel"]
+content_margin_left = 18.0
+content_margin_top = 16.0
+content_margin_right = 18.0
+content_margin_bottom = 16.0
+bg_color = Color(0.0431373, 0.0431373, 0.054902, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.870588, 0.870588, 0.870588, 0.8)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="RunaPrologue" type="CanvasLayer"]
+layer = 30
+script = ExtResource("1_script")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+mouse_filter = 1
+
+[node name="BackdropTint" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.42)
+
+[node name="FadeOverlay" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="NarrationLayer" type="MarginContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 132
+theme_override_constants/margin_top = 132
+theme_override_constants/margin_right = 132
+theme_override_constants/margin_bottom = 116
+
+[node name="NarrationLabel" type="Label" parent="Root/NarrationLayer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 28
+text = "Текст постановки"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 3
+
+[node name="PhoneCard" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -432.0
+offset_top = 28.0
+offset_right = -28.0
+offset_bottom = 202.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_phone")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/PhoneCard"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Root/PhoneCard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StatusLabel" type="Label" parent="Root/PhoneCard/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "1 пропущенный вызов"
+
+[node name="NameLabel" type="Label" parent="Root/PhoneCard/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Хлоя"
+
+[node name="MetaLabel" type="Label" parent="Root/PhoneCard/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "07:21"
+
+[node name="CaptionLabel" type="Label" parent="Root/PhoneCard/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+text = "Экран вспыхнул снова."
+
+[node name="CallPanel" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -470.0
+offset_top = -164.0
+offset_right = 470.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_story_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/CallPanel"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Root/CallPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CallStatusLabel" type="Label" parent="Root/CallPanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Холодный звонок"
+
+[node name="SpeakerLabel" type="Label" parent="Root/CallPanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Хлоя"
+
+[node name="DialogLabel" type="Label" parent="Root/CallPanel/MarginContainer/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+text = "Диалог"
+
+[node name="HintLabel" type="Label" parent="Root/CallPanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "E / Enter / ЛКМ - далее"
+
+[node name="ThoughtPanel" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = 142.0
+offset_right = 430.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_story_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/ThoughtPanel"]
+layout_mode = 2
+
+[node name="ThoughtLabel" type="Label" parent="Root/ThoughtPanel/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+autowrap_mode = 3
+horizontal_alignment = 1
+text = "Мысль Руны"
+
+[node name="ObjectivePanel" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -132.0
+offset_right = 450.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_story_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/ObjectivePanel"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Root/ObjectivePanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MetaLabel" type="Label" parent="Root/ObjectivePanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Основная цель"
+
+[node name="TitleLabel" type="Label" parent="Root/ObjectivePanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+autowrap_mode = 3
+text = "Прожить 7 дней и оплатить аренду"
+
+[node name="DetailsLabel" type="Label" parent="Root/ObjectivePanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 3
+text = "На руках: $25"

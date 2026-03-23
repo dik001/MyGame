@@ -1,0 +1,362 @@
+[gd_scene format=3 uid="uid://bgy0g0ikxxbdj"]
+
+[ext_resource type="Script" uid="uid://dhysh8yhu4wko" path="res://scenes/minigames/computer_desktop.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://b4x1bfkruwpex" path="res://art/slithario/slithario.png" id="2_slithario_icon"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="3_theme"]
+[ext_resource type="PackedScene" path="res://scenes/ui/shop_window.tscn" id="4_shop_window"]
+[ext_resource type="PackedScene" path="res://scenes/ui/delivery_tracker_window.tscn" id="5_delivery_window"]
+[ext_resource type="Texture2D" uid="uid://cyd16oqbg3mnd" path="res://icon.svg" id="6_calendar_icon"]
+[ext_resource type="Resource" path="res://resources/items/apple.tres" id="7_apple"]
+[ext_resource type="Texture2D" uid="uid://cy1ynobyj4hjl" path="res://art/props/Computer_ico/Martet.png" id="7_shop_icon"]
+[ext_resource type="Resource" path="res://resources/items/banana.tres" id="8_banana"]
+[ext_resource type="Texture2D" uid="uid://7gknt1rohpkx" path="res://art/props/Computer_ico/Delivery.png" id="8_delivery_icon"]
+[ext_resource type="Resource" path="res://resources/items/bread.tres" id="9_bread"]
+[ext_resource type="Texture2D" uid="uid://cyq5debqq1rcr" path="res://art/props/Computer_ico/Freelance.png" id="9_freelance_icon"]
+[ext_resource type="Texture2D" uid="uid://d005f5epuaa05" path="res://art/props/Computer_ico/Bank.png" id="10_bank_icon"]
+[ext_resource type="Resource" path="res://resources/items/canned_food.tres" id="10_canned_food"]
+[ext_resource type="Resource" path="res://resources/items/cheese.tres" id="11_cheese"]
+[ext_resource type="Texture2D" uid="uid://b4yxan4m0dyl" path="res://art/props/Computer_ico/LeChat.png" id="11_lechat_icon"]
+[ext_resource type="Script" uid="uid://b8f20llgxglg1" path="res://scenes/items/ItemData.gd" id="11_vbete"]
+[ext_resource type="Resource" path="res://resources/items/noodles.tres" id="12_noodles"]
+[ext_resource type="Resource" path="res://resources/items/egg.tres" id="13_egg"]
+[ext_resource type="Resource" path="res://resources/items/meat.tres" id="14_meat"]
+[ext_resource type="Resource" path="res://resources/items/milk.tres" id="15_milk"]
+[ext_resource type="Resource" path="res://resources/items/sausage.tres" id="16_sausage"]
+
+[node name="ComputerDesktop" type="Control" unique_id=1505779610]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_theme")
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1130991575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.108497, 0.227389, 0.37191, 1)
+
+[node name="DesktopRoot" type="Control" parent="." unique_id=1379483426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DesktopHomeLayer" type="Control" parent="DesktopRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Taskbar" type="Panel" parent="DesktopRoot/DesktopHomeLayer" unique_id=317191365]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TaskbarLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/Taskbar" unique_id=1254695294]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 22.0
+offset_right = 340.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 28
+text = "Компьютер"
+
+[node name="HintLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/Taskbar" unique_id=934658375]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_top = 24.0
+offset_right = -20.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 24
+text = "Esc - выйти"
+horizontal_alignment = 2
+
+[node name="ShortcutLayer" type="Control" parent="DesktopRoot/DesktopHomeLayer" unique_id=1395443598]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlitharioShortcut" type="Control" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer" unique_id=509946944]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 26.0
+offset_right = 156.0
+offset_bottom = 166.0
+
+[node name="SlitharioIconButton" type="TextureButton" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/SlitharioShortcut" unique_id=262754268]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("2_slithario_icon")
+texture_pressed = ExtResource("2_slithario_icon")
+texture_hover = ExtResource("2_slithario_icon")
+stretch_mode = 3
+
+[node name="SlitharioLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/SlitharioShortcut" unique_id=599196079]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+text = "Slithario"
+horizontal_alignment = 1
+
+[node name="ShopShortcut" type="Control" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer" unique_id=1270934275]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 190.0
+offset_right = 156.0
+offset_bottom = 330.0
+
+[node name="ShopIconButton" type="TextureButton" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/ShopShortcut" unique_id=189872385]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("7_shop_icon")
+texture_pressed = ExtResource("7_shop_icon")
+texture_hover = ExtResource("7_shop_icon")
+stretch_mode = 3
+
+[node name="ShopLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/ShopShortcut" unique_id=15241634]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+text = "Магазин"
+horizontal_alignment = 1
+
+[node name="DeliveryShortcut" type="Control" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer" unique_id=285545780]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 354.0
+offset_right = 156.0
+offset_bottom = 494.0
+
+[node name="DeliveryIconButton" type="TextureButton" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/DeliveryShortcut" unique_id=2065599208]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("8_delivery_icon")
+texture_pressed = ExtResource("8_delivery_icon")
+texture_hover = ExtResource("8_delivery_icon")
+stretch_mode = 3
+
+[node name="DeliveryLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/DeliveryShortcut" unique_id=1898093610]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+text = "Доставка"
+horizontal_alignment = 1
+
+[node name="LeChatShortcut" type="Control" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer" unique_id=876100278]
+anchors_preset = 0
+offset_left = 184.0
+offset_top = 26.0
+offset_right = 312.0
+offset_bottom = 166.0
+
+[node name="LeChatIconButton" type="TextureButton" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/LeChatShortcut" unique_id=148277053]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("11_lechat_icon")
+texture_pressed = ExtResource("11_lechat_icon")
+texture_hover = ExtResource("11_lechat_icon")
+stretch_mode = 3
+
+[node name="LeChatLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/LeChatShortcut" unique_id=870942494]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+text = "LeChat"
+horizontal_alignment = 1
+
+[node name="CalendarShortcut" type="Control" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer" unique_id=1402550089]
+anchors_preset = 0
+offset_left = 184.0
+offset_top = 190.0
+offset_right = 312.0
+offset_bottom = 330.0
+
+[node name="CalendarIconButton" type="TextureButton" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/CalendarShortcut" unique_id=2035024122]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("6_calendar_icon")
+texture_pressed = ExtResource("6_calendar_icon")
+texture_hover = ExtResource("6_calendar_icon")
+stretch_mode = 3
+
+[node name="CalendarLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/CalendarShortcut" unique_id=1064120368]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+text = "Календарь"
+horizontal_alignment = 1
+
+[node name="FreelanceShortcut" type="Control" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer" unique_id=215100786]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 518.0
+offset_right = 156.0
+offset_bottom = 658.0
+
+[node name="FreelanceIconButton" type="TextureButton" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/FreelanceShortcut" unique_id=928606960]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("9_freelance_icon")
+texture_pressed = ExtResource("9_freelance_icon")
+texture_hover = ExtResource("9_freelance_icon")
+stretch_mode = 3
+
+[node name="FreelanceLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/FreelanceShortcut" unique_id=1800293493]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+text = "Фриланс"
+horizontal_alignment = 1
+
+[node name="BankShortcut" type="Control" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer" unique_id=464019090]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 682.0
+offset_right = 156.0
+offset_bottom = 822.0
+
+[node name="BankIconButton" type="TextureButton" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/BankShortcut" unique_id=1125595886]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture_normal = ExtResource("10_bank_icon")
+texture_pressed = ExtResource("10_bank_icon")
+texture_hover = ExtResource("10_bank_icon")
+stretch_mode = 3
+
+[node name="BankLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/ShortcutLayer/BankShortcut" unique_id=1382994732]
+layout_mode = 0
+offset_top = 106.0
+offset_right = 128.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 22
+text = "Банк"
+horizontal_alignment = 1
+
+[node name="DesktopStatusWidget" type="PanelContainer" parent="DesktopRoot/DesktopHomeLayer" unique_id=1423934177]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -404.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 146.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DesktopRoot/DesktopHomeLayer/DesktopStatusWidget" unique_id=704720905]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 16
+
+[node name="Content" type="VBoxContainer" parent="DesktopRoot/DesktopHomeLayer/DesktopStatusWidget/MarginContainer" unique_id=1062977710]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="DayTimeLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/DesktopStatusWidget/MarginContainer/Content" unique_id=369335227]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "День 1, 07:25"
+horizontal_alignment = 2
+
+[node name="RentDueLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/DesktopStatusWidget/MarginContainer/Content" unique_id=2123959912]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Следующая аренда: --"
+horizontal_alignment = 2
+
+[node name="RentStatusLabel" type="Label" parent="DesktopRoot/DesktopHomeLayer/DesktopStatusWidget/MarginContainer/Content" unique_id=2053436257]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Статус: Нет данных"
+horizontal_alignment = 2
+
+[node name="FullscreenAppLayer" type="Control" parent="DesktopRoot"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AppBackdrop" type="ColorRect" parent="DesktopRoot/FullscreenAppLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0156863, 0.0392157, 0.0705882, 1)
+
+[node name="AppHost" type="Control" parent="DesktopRoot/FullscreenAppLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShopWindow" parent="DesktopRoot/FullscreenAppLayer/AppHost" unique_id=1397838121 instance=ExtResource("4_shop_window")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+catalog = Array[ExtResource("11_vbete")]([ExtResource("7_apple"), ExtResource("8_banana"), ExtResource("9_bread"), ExtResource("10_canned_food"), ExtResource("11_cheese"), ExtResource("12_noodles"), ExtResource("13_egg"), ExtResource("14_meat"), ExtResource("15_milk"), ExtResource("16_sausage")])
+
+[node name="DeliveryTrackerWindow" parent="DesktopRoot/FullscreenAppLayer/AppHost" unique_id=1357857440 instance=ExtResource("5_delivery_window")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

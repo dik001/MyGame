@@ -1,0 +1,345 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/phone/PhoneUI.gd" id="1_phone_script"]
+[ext_resource type="Theme" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phone_shell"]
+bg_color = Color(0.0509804, 0.0705882, 0.117647, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.211765, 0.278431, 0.380392, 1)
+corner_radius_top_left = 34
+corner_radius_top_right = 34
+corner_radius_bottom_right = 34
+corner_radius_bottom_left = 34
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_screen_panel"]
+bg_color = Color(0.835294, 0.945098, 0.972549, 1)
+corner_radius_top_left = 26
+corner_radius_top_right = 26
+corner_radius_bottom_right = 26
+corner_radius_bottom_left = 26
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_status_bar"]
+bg_color = Color(0.113725, 0.215686, 0.298039, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avatar"]
+bg_color = Color(0.992157, 0.780392, 0.301961, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 0.72)
+corner_radius_top_left = 88
+corner_radius_top_right = 88
+corner_radius_bottom_right = 88
+corner_radius_bottom_left = 88
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_timer_pill"]
+bg_color = Color(1, 1, 1, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.329412, 0.454902, 0.22)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dialogue_panel"]
+bg_color = Color(1, 1, 1, 0.82)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.243137, 0.364706, 0.458824, 0.16)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_accept_button"]
+bg_color = Color(0.164706, 0.713726, 0.466667, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_accept_button_hover"]
+bg_color = Color(0.223529, 0.780392, 0.529412, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_accept_button_pressed"]
+bg_color = Color(0.121569, 0.588235, 0.384314, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_end_button"]
+bg_color = Color(0.858824, 0.286275, 0.282353, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_end_button_hover"]
+bg_color = Color(0.929412, 0.364706, 0.356863, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_end_button_pressed"]
+bg_color = Color(0.690196, 0.211765, 0.207843, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bottom_indicator"]
+bg_color = Color(0.0823529, 0.117647, 0.176471, 0.56)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="PhoneUI" type="CanvasLayer"]
+script = ExtResource("1_phone_script")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+
+[node name="PhoneAnchor" type="Control" parent="Root"]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="PhoneShell" type="PanelContainer" parent="Root/PhoneAnchor"]
+custom_minimum_size = Vector2(360, 640)
+offset_left = -392.0
+offset_top = -664.0
+offset_right = -32.0
+offset_bottom = -24.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_phone_shell")
+
+[node name="ScreenPanel" type="PanelContainer" parent="Root/PhoneAnchor/PhoneShell"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_screen_panel")
+
+[node name="ScreenMargin" type="MarginContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 20
+
+[node name="Layout" type="VBoxContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="StatusBar" type="PanelContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_status_bar")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/StatusBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="Row" type="HBoxContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/StatusBar/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SignalLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/StatusBar/MarginContainer/Row"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.94)
+theme_override_font_sizes/font_size = 15
+text = "LTE"
+
+[node name="StatusSpacer" type="Control" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/StatusBar/MarginContainer/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="BatteryLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/StatusBar/MarginContainer/Row"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.94)
+theme_override_font_sizes/font_size = 15
+text = "96%"
+
+[node name="TimeLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/StatusBar/MarginContainer/Row"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.94)
+theme_override_font_sizes/font_size = 15
+text = "07:25"
+
+[node name="Content" type="VBoxContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="AvatarCenter" type="CenterContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AvatarFrame" type="PanelContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/AvatarCenter"]
+custom_minimum_size = Vector2(156, 156)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_avatar")
+
+[node name="AvatarTexture" type="TextureRect" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/AvatarCenter/AvatarFrame"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AvatarInitials" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/AvatarCenter/AvatarFrame"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.101961, 0.117647, 0.14902, 1)
+theme_override_font_sizes/font_size = 42
+text = "М"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0705882, 0.113725, 0.176471, 1)
+theme_override_font_sizes/font_size = 28
+text = "Мама"
+horizontal_alignment = 1
+
+[node name="CallStatusLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.129412, 0.243137, 0.345098, 1)
+theme_override_font_sizes/font_size = 18
+text = "Входящий вызов"
+horizontal_alignment = 1
+
+[node name="ConversationLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.231373, 0.333333, 0.423529, 1)
+theme_override_font_sizes/font_size = 14
+text = "Диалог: demo_mama_call"
+horizontal_alignment = 1
+
+[node name="TimerCenter" type="CenterContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimerPill" type="PanelContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/TimerCenter"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_timer_pill")
+
+[node name="TimerLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/TimerCenter/TimerPill"]
+custom_minimum_size = Vector2(116, 42)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0784314, 0.117647, 0.176471, 1)
+theme_override_font_sizes/font_size = 26
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DialoguePanel" type="PanelContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_dialogue_panel")
+
+[node name="DialogueMargin" type="MarginContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/DialoguePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 14
+
+[node name="DialogueTextLabel" type="Label" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/DialoguePanel/DialogueMargin"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.105882, 0.129412, 0.180392, 1)
+theme_override_font_sizes/font_size = 17
+text = "Мама: Ты где? Почему не отвечала?"
+autowrap_mode = 3
+
+[node name="ContentSpacer" type="Control" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="ButtonsRow" type="HBoxContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="AcceptButton" type="Button" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/ButtonsRow"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_accept_button")
+theme_override_styles/hover = SubResource("StyleBoxFlat_accept_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_accept_button_pressed")
+text = "Принять"
+
+[node name="EndButton" type="Button" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/ButtonsRow"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_end_button")
+theme_override_styles/hover = SubResource("StyleBoxFlat_end_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_end_button_pressed")
+text = "Сбросить"
+
+[node name="BottomIndicatorCenter" type="CenterContainer" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content"]
+layout_mode = 2
+
+[node name="BottomIndicator" type="Panel" parent="Root/PhoneAnchor/PhoneShell/ScreenPanel/ScreenMargin/Layout/Content/BottomIndicatorCenter"]
+custom_minimum_size = Vector2(92, 10)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bottom_indicator")
+
+[node name="StatusClockTimer" type="Timer" parent="."]
+wait_time = 1.0
+
+[node name="CallDurationTimer" type="Timer" parent="."]
+wait_time = 1.0
+
+[node name="PostEndTimer" type="Timer" parent="."]
+wait_time = 1.1
+one_shot = true
