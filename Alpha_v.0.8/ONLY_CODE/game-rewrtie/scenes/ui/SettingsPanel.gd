@@ -2,6 +2,7 @@ class_name SettingsPanel
 extends PanelContainer
 
 var _window_mode_option: OptionButton
+var _window_resolution_option: OptionButton
 var _master_slider: HSlider
 var _master_value_label: Label
 var _music_slider: HSlider
@@ -34,11 +35,13 @@ func stop_rebind_capture() -> void:
 
 
 func refresh_panel() -> void:
-	if _window_mode_option == null:
+	if _window_mode_option == null or _window_resolution_option == null:
 		return
 
 	_is_refreshing = true
 	_window_mode_option.select(0 if GameSettings.get_window_mode() == GameSettings.WINDOW_MODE_WINDOWED else 1)
+	_select_window_resolution_option(GameSettings.get_window_resolution_key())
+	_window_resolution_option.disabled = GameSettings.get_window_mode() == GameSettings.WINDOW_MODE_FULLSCREEN
 	_master_slider.value = GameSettings.get_master_volume_db()
 	_music_slider.value = GameSettings.get_music_volume_db()
 	_master_value_label.text = _format_volume_text(_master_slider.value)
@@ -110,6 +113,7 @@ func _build_ui() -> void:
 	content.add_child(subtitle_label)
 
 	content.add_child(_build_window_mode_row())
+	content.add_child(_build_window_resolution_row())
 	content.add_child(_build_volume_row("Общая громкость", true))
 	content.add_child(_build_volume_row("Громкость музыки", false))
 
@@ -166,6 +170,31 @@ func _build_window_mode_row() -> Control:
 	_window_mode_option.add_item("Полный экран")
 	_window_mode_option.item_selected.connect(_on_window_mode_selected)
 	row.add_child(_window_mode_option)
+
+	return row
+
+
+func _build_window_resolution_row() -> Control:
+	var row := HBoxContainer.new()
+	row.custom_minimum_size = Vector2(0.0, 56.0)
+	row.add_theme_constant_override("separation", 18)
+
+	var label := Label.new()
+	label.text = "Разрешение"
+	label.custom_minimum_size = Vector2(280.0, 0.0)
+	row.add_child(label)
+
+	_window_resolution_option = OptionButton.new()
+	_window_resolution_option.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+	for option in GameSettings.get_window_resolution_options():
+		var option_label := String(option.get("label", ""))
+		var option_id := String(option.get("id", option_label))
+		_window_resolution_option.add_item(option_label)
+		_window_resolution_option.set_item_metadata(_window_resolution_option.item_count - 1, option_id)
+
+	_window_resolution_option.item_selected.connect(_on_window_resolution_selected)
+	row.add_child(_window_resolution_option)
 
 	return row
 
@@ -237,6 +266,17 @@ func _format_volume_text(value: float) -> String:
 	return "%ddB" % int(roundi(value))
 
 
+func _select_window_resolution_option(window_resolution_key: String) -> void:
+	for index in range(_window_resolution_option.item_count):
+		if String(_window_resolution_option.get_item_metadata(index)) != window_resolution_key:
+			continue
+
+		_window_resolution_option.select(index)
+		return
+
+	_window_resolution_option.select(0)
+
+
 func _on_window_mode_selected(index: int) -> void:
 	if _is_refreshing:
 		return
@@ -244,6 +284,14 @@ func _on_window_mode_selected(index: int) -> void:
 	GameSettings.set_window_mode(
 		GameSettings.WINDOW_MODE_WINDOWED if index == 0 else GameSettings.WINDOW_MODE_FULLSCREEN
 	)
+
+
+func _on_window_resolution_selected(index: int) -> void:
+	if _is_refreshing or _window_resolution_option.disabled:
+		return
+
+	var window_resolution_key := String(_window_resolution_option.get_item_metadata(index))
+	GameSettings.set_window_resolution(window_resolution_key)
 
 
 func _on_master_volume_changed(value: float) -> void:

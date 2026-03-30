@@ -6,9 +6,12 @@ signal input_binding_changed(action_name: StringName)
 
 const SETTINGS_PATH := "user://settings.json"
 const MUSIC_BUS_NAME := "Music"
-const TARGET_WINDOW_SIZE := Vector2i(1920, 1080)
+const BASE_VIEWPORT_SIZE := Vector2i(1920, 1080)
 const WINDOW_MODE_WINDOWED := "windowed"
 const WINDOW_MODE_FULLSCREEN := "fullscreen"
+const WINDOW_RESOLUTION_1920 := "1920x1080"
+const WINDOW_RESOLUTION_1366 := "1366x768"
+const DEFAULT_WINDOW_RESOLUTION := WINDOW_RESOLUTION_1920
 const DEFAULT_MASTER_VOLUME_DB := 0.0
 const DEFAULT_MUSIC_VOLUME_DB := -20.0
 const DEFAULT_ACTION_KEYCODES := {
@@ -53,6 +56,31 @@ func get_music_bus_name() -> String:
 
 func get_window_mode() -> String:
 	return String(_settings.get("window_mode", WINDOW_MODE_WINDOWED))
+
+
+func get_window_resolution_key() -> String:
+	return _normalize_window_resolution_key(String(_settings.get("window_resolution", DEFAULT_WINDOW_RESOLUTION)))
+
+
+func get_window_resolution_size() -> Vector2i:
+	match get_window_resolution_key():
+		WINDOW_RESOLUTION_1366:
+			return Vector2i(1366, 768)
+		_:
+			return Vector2i(1920, 1080)
+
+
+func get_window_resolution_options() -> Array[Dictionary]:
+	return [
+		{
+			"id": WINDOW_RESOLUTION_1920,
+			"label": WINDOW_RESOLUTION_1920,
+		},
+		{
+			"id": WINDOW_RESOLUTION_1366,
+			"label": WINDOW_RESOLUTION_1366,
+		},
+	]
 
 
 func get_master_volume_db() -> float:
@@ -121,6 +149,18 @@ func set_window_mode(window_mode: String) -> void:
 	settings_changed.emit()
 
 
+func set_window_resolution(window_resolution: String) -> void:
+	var normalized_resolution := _normalize_window_resolution_key(window_resolution)
+
+	if get_window_resolution_key() == normalized_resolution:
+		return
+
+	_settings["window_resolution"] = normalized_resolution
+	_apply_window_mode_setting()
+	_save_settings()
+	settings_changed.emit()
+
+
 func set_master_volume_db(volume_db: float) -> void:
 	var normalized_volume := clampf(volume_db, -60.0, 6.0)
 
@@ -175,6 +215,7 @@ func _build_default_settings() -> Dictionary:
 
 	return {
 		"window_mode": WINDOW_MODE_WINDOWED,
+		"window_resolution": DEFAULT_WINDOW_RESOLUTION,
 		"master_volume_db": DEFAULT_MASTER_VOLUME_DB,
 		"music_volume_db": DEFAULT_MUSIC_VOLUME_DB,
 		"input_bindings": bindings,
@@ -199,6 +240,9 @@ func _load_settings() -> void:
 
 	var loaded: Dictionary = parsed
 	_settings["window_mode"] = String(loaded.get("window_mode", WINDOW_MODE_WINDOWED)).strip_edges().to_lower()
+	_settings["window_resolution"] = _normalize_window_resolution_key(
+		String(loaded.get("window_resolution", DEFAULT_WINDOW_RESOLUTION))
+	)
 	_settings["master_volume_db"] = clampf(
 		float(loaded.get("master_volume_db", DEFAULT_MASTER_VOLUME_DB)),
 		-60.0,
@@ -292,6 +336,15 @@ func _create_key_event(keycode: int) -> InputEventKey:
 	return key_event
 
 
+func _normalize_window_resolution_key(window_resolution: String) -> String:
+	var normalized_resolution := window_resolution.strip_edges()
+
+	if normalized_resolution == WINDOW_RESOLUTION_1366:
+		return WINDOW_RESOLUTION_1366
+
+	return WINDOW_RESOLUTION_1920
+
+
 func _apply_window_mode_setting() -> void:
 	var tree := get_tree()
 
@@ -299,14 +352,27 @@ func _apply_window_mode_setting() -> void:
 		return
 
 	var window := tree.root
+	window.unresizable = true
+	window.content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
+	window.content_scale_size = BASE_VIEWPORT_SIZE
+	window.content_scale_stretch = _resolve_content_scale_stretch()
 
 	if get_window_mode() == WINDOW_MODE_FULLSCREEN:
+		window.min_size = Vector2i.ZERO
 		window.mode = Window.MODE_FULLSCREEN
 		return
 
+	var target_window_size := get_window_resolution_size()
 	window.mode = Window.MODE_WINDOWED
-	window.min_size = TARGET_WINDOW_SIZE
-	window.size = TARGET_WINDOW_SIZE
+	window.min_size = target_window_size
+	window.size = target_window_size
+
+
+func _resolve_content_scale_stretch() -> int:
+	if get_window_mode() == WINDOW_MODE_WINDOWED and get_window_resolution_key() == WINDOW_RESOLUTION_1366:
+		return Window.CONTENT_SCALE_STRETCH_FRACTIONAL
+
+	return Window.CONTENT_SCALE_STRETCH_INTEGER
 
 
 func _apply_master_volume_setting() -> void:

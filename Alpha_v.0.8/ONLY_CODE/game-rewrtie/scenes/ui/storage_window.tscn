@@ -37,7 +37,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="WindowPanel" type="PanelContainer" parent="Overlay/CenterContainer"]
-custom_minimum_size = Vector2(1620, 0)
+custom_minimum_size = Vector2(1320, 0)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel"]
@@ -65,7 +65,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 20
 
 [node name="PlayerPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow"]
-custom_minimum_size = Vector2(0, 640)
+custom_minimum_size = Vector2(0, 520)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -129,7 +129,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/Body"]
-custom_minimum_size = Vector2(0, 480)
+custom_minimum_size = Vector2(0, 360)
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -163,7 +163,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 22
 
 [node name="StoragePanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow"]
-custom_minimum_size = Vector2(0, 640)
+custom_minimum_size = Vector2(0, 520)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -227,7 +227,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/Body"]
-custom_minimum_size = Vector2(0, 480)
+custom_minimum_size = Vector2(0, 360)
 layout_mode = 2
 size_flags_vertical = 3
 
