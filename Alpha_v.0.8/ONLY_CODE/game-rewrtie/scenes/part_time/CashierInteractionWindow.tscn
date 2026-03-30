@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/part_time/CashierInteractionWindow.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_window_panel"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.0352941, 0.0666667, 0.105882, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.458824, 0.698039, 0.827451, 1)
+corner_detail = 1
+anti_aliasing = false
+
+[node name="CashierInteractionWindow" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0.0156863, 0.0392157, 0.0705882, 0.82)
+
+[node name="Panel" type="PanelContainer" parent="Dim"]
+custom_minimum_size = Vector2(680, 0)
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -220.0
+offset_right = 340.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_window_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dim/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 26
+theme_override_constants/margin_top = 26
+theme_override_constants/margin_right = 26
+theme_override_constants/margin_bottom = 26
+
+[node name="Content" type="VBoxContainer" parent="Dim/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="TitleLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Касса"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Что тебе нужно?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonsColumn" type="VBoxContainer" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ShopButton" type="Button" parent="Dim/Panel/MarginContainer/Content/ButtonsColumn"]
+custom_minimum_size = Vector2(0, 66)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Магазин"
+
+[node name="JobButton" type="Button" parent="Dim/Panel/MarginContainer/Content/ButtonsColumn"]
+custom_minimum_size = Vector2(0, 66)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Подработка"
+
+[node name="CloseButton" type="Button" parent="Dim/Panel/MarginContainer/Content/ButtonsColumn"]
+custom_minimum_size = Vector2(0, 66)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Закрыть"
+
+[node name="HintLabel" type="Label" parent="Dim/Panel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72549, 0.898039, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Подработка: сортировка мусора, только утром."
+horizontal_alignment = 1
+autowrap_mode = 3

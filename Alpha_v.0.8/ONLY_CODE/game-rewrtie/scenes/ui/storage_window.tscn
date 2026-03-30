@@ -1,0 +1,285 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/storage_window.gd" id="1_window"]
+[ext_resource type="Theme" path="res://resources/ui/game_theme.tres" id="2_theme"]
+
+[node name="StorageWindow" type="CanvasLayer"]
+layer = 6
+script = ExtResource("1_window")
+
+[node name="Overlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("2_theme")
+
+[node name="Dimmer" type="ColorRect" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0117647, 0.0156863, 0.0313726, 0.52)
+
+[node name="CenterContainer" type="CenterContainer" parent="Overlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WindowPanel" type="PanelContainer" parent="Overlay/CenterContainer"]
+custom_minimum_size = Vector2(1620, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Content" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="HintLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="PanelsRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="PlayerPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow"]
+custom_minimum_size = Vector2(0, 640)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PlayerContent" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="PanelTitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+
+[node name="HeaderPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent"]
+layout_mode = 2
+
+[node name="HeaderRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/HeaderPanel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconHeader" type="Control" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+
+[node name="NameHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/HeaderPanel/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+
+[node name="WeightHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="FreshnessHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="QuantityHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="Body" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/Body"]
+custom_minimum_size = Vector2(0, 480)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RowsContainer" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/Body/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="EmptyLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/Body"]
+custom_minimum_size = Vector2(0, 120)
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FooterRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TotalWeightLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/FooterRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="StoreButton" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/PlayerPanel/MarginContainer/PlayerContent/FooterRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="StoragePanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow"]
+custom_minimum_size = Vector2(0, 640)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="StorageContent" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="PanelTitleLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+
+[node name="HeaderPanel" type="PanelContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent"]
+layout_mode = 2
+
+[node name="HeaderRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/HeaderPanel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconHeader" type="Control" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+
+[node name="NameHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/HeaderPanel/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+
+[node name="WeightHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="FreshnessHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="QuantityHeader" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/HeaderPanel/HeaderRow"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="Body" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/Body"]
+custom_minimum_size = Vector2(0, 480)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RowsContainer" type="VBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/Body/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="EmptyLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/Body"]
+custom_minimum_size = Vector2(0, 120)
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FooterRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TotalWeightLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/FooterRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="TakeButton" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/FooterRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="ConsumeButton" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/PanelsRow/StoragePanel/MarginContainer/StorageContent/FooterRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+
+[node name="StatusLabel" type="Label" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+autowrap_mode = 3
+
+[node name="BottomRow" type="HBoxContainer" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="BottomSpacer" type="Control" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/BottomRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CloseButton" type="Button" parent="Overlay/CenterContainer/WindowPanel/MarginContainer/Content/BottomRow"]
+custom_minimum_size = Vector2(190, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22

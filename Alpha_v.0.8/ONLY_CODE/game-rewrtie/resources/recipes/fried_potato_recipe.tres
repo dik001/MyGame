@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/RecipeData.gd" id="1_recipe"]
+[ext_resource type="Resource" path="res://resources/items/fried_potato.tres" id="2_result"]
+[ext_resource type="Resource" path="res://resources/items/potato.tres" id="3_potato"]
+
+[resource]
+script = ExtResource("1_recipe")
+id = "fried_potato_recipe"
+recipe_name = "Жареная картошка"
+description = "Картошка, которую можно приготовить на огне."
+result_item = ExtResource("2_result")
+ingredients = Array[Dictionary]([{
+"item": ExtResource("3_potato"),
+"quantity": 1
+}])
+required_station_tags = PackedStringArray("fire")
+

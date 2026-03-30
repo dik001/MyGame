@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Meat.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "meat"
+item_name = "Мясо"
+description = "Сырым мясом можно перебиться, но лучше его всё же приготовить."
+icon = ExtResource("2_icon")
+max_stack_size = 6
+weight = 0.5
+price = 95
+is_consumable = true
+is_food = true
+hunger_restore = 20
+use_effects = Array[Dictionary]([{
+"id": "indigestion"
+}])
+base_shelf_life_days = 3.0
+category = &"food"
+item_source = &"store"
+

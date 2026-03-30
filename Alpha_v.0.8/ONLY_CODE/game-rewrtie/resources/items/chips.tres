@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Chips.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "chips"
+item_name = "Чипсы"
+description = "Солёная пачка, которая поднимает настроение, но иногда бьёт по животу."
+icon = ExtResource("2_icon")
+max_stack_size = 8
+weight = 0.15
+price = 55
+is_consumable = true
+is_food = true
+hunger_restore = 20
+mood_delta = 40
+use_effects = Array[Dictionary]([{
+"id": "stomach_pain"
+}])
+base_shelf_life_days = 180.0
+category = &"food"
+item_source = &"store"
+

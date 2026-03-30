@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Potato.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "potato"
+item_name = "Картошка"
+description = "Сырая картошка. В магазине её продают как ингредиент, а не как готовую еду."
+icon = ExtResource("2_icon")
+max_stack_size = 12
+weight = 0.3
+price = 18
+is_food = true
+base_shelf_life_days = 20.0
+category = &"food"
+item_source = &"store"
+

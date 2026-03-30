@@ -1,0 +1,141 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/dialogue/DialogueBoxUI.gd" id="1_dialogue_box_script"]
+[ext_resource type="Theme" path="res://resources/ui/game_theme.tres" id="2_dialogue_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dialogue_panel"]
+bg_color = Color(0.0980392, 0.160784, 0.145098, 0.97)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.913725, 0.968627, 0.929412, 0.94)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.32)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_portrait_panel"]
+bg_color = Color(0.0980392, 0.160784, 0.145098, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.913725, 0.968627, 0.929412, 0.72)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="DialogueBoxUI" type="CanvasLayer"]
+layer = 40
+script = ExtResource("1_dialogue_box_script")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_dialogue_theme")
+
+[node name="BottomAnchor" type="Control" parent="Root"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -182.0
+offset_right = 420.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="DialoguePanel" type="PanelContainer" parent="Root/BottomAnchor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dialogue_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root/BottomAnchor/DialoguePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 14
+
+[node name="Row" type="HBoxContainer" parent="Root/BottomAnchor/DialoguePanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="PortraitFrame" type="PanelContainer" parent="Root/BottomAnchor/DialoguePanel/MarginContainer/Row"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_portrait_panel")
+
+[node name="PortraitTexture" type="TextureRect" parent="Root/BottomAnchor/DialoguePanel/MarginContainer/Row/PortraitFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextColumn" type="VBoxContainer" parent="Root/BottomAnchor/DialoguePanel/MarginContainer/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="NameLabel" type="Label" parent="Root/BottomAnchor/DialoguePanel/MarginContainer/Row/TextColumn"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.937255, 0.976471, 0.945098, 1)
+theme_override_font_sizes/font_size = 22
+text = "Мама"
+
+[node name="TextLabel" type="Label" parent="Root/BottomAnchor/DialoguePanel/MarginContainer/Row/TextColumn"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 3
+text = "Ты где? Почему не отвечала?"
+
+[node name="HintLabel" type="Label" parent="Root/BottomAnchor/DialoguePanel/MarginContainer/Row/TextColumn"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.788235, 0.858824, 0.819608, 0.84)
+theme_override_font_sizes/font_size = 14
+text = "E / Enter - далее"
+
+[node name="AdvanceLabel" type="Label" parent="Root/BottomAnchor/DialoguePanel"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -26.0
+offset_right = -12.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.937255, 0.976471, 0.945098, 1)
+theme_override_font_sizes/font_size = 14
+text = "▼"
+horizontal_alignment = 1
+vertical_alignment = 1

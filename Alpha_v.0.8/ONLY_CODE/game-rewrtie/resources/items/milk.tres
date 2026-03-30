@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Milk.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "milk"
+item_name = "Молоко"
+description = "Пачка молока. Немного насыщает и даёт запас прочности на будущее."
+icon = ExtResource("2_icon")
+max_stack_size = 6
+weight = 0.5
+price = 23
+is_consumable = true
+is_food = true
+hunger_restore = 8
+use_effects = Array[Dictionary]([{
+"id": "fracture_resistance"
+}])
+base_shelf_life_days = 5.0
+category = &"food"
+item_source = &"store"
+

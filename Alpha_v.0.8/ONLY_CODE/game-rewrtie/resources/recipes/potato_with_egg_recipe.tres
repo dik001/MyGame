@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/RecipeData.gd" id="1_recipe"]
+[ext_resource type="Resource" path="res://resources/items/potato_with_egg.tres" id="2_result"]
+[ext_resource type="Resource" path="res://resources/items/potato.tres" id="3_potato"]
+[ext_resource type="Resource" path="res://resources/items/egg.tres" id="4_egg"]
+
+[resource]
+script = ExtResource("1_recipe")
+id = "potato_with_egg_recipe"
+recipe_name = "Картошка с яйцом"
+description = "Картошка с яйцом, приготовленные на огне."
+result_item = ExtResource("2_result")
+ingredients = Array[Dictionary]([{
+"item": ExtResource("3_potato"),
+"quantity": 1
+}, {
+"item": ExtResource("4_egg"),
+"quantity": 1
+}])
+required_station_tags = PackedStringArray("fire")
+

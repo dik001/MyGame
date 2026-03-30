@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/minigames/slithario.gd" id="1_8r4rs"]
+[ext_resource type="PackedScene" path="res://scenes/minigames/player_snake.tscn" id="2_3wumt"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="3_theme"]
+
+[node name="Slithario" type="Node2D"]
+script = ExtResource("1_8r4rs")
+
+[node name="Arena" type="Node2D" parent="."]
+
+[node name="ArenaBackground" type="Polygon2D" parent="Arena"]
+color = Color(0.0941176, 0.113725, 0.101961, 1)
+z_index = -10
+
+[node name="ArenaBorder" type="Line2D" parent="Arena"]
+default_color = Color(0.47451, 0.85098, 0.490196, 1)
+width = 12.0
+joint_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+z_index = -9
+
+[node name="Foods" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="PlayerSnake" parent="." instance=ExtResource("2_3wumt")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_theme")
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ScoreLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 38
+text = "Score: 0"
+
+[node name="HintLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Esc - desktop"
+
+[node name="GameOverOverlay" type="CenterContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="GameOverLabel" type="Label" parent="UI/GameOverOverlay"]
+layout_mode = 2
+theme = ExtResource("3_theme")
+theme_override_font_sizes/font_size = 92
+text = "GAME OVER"
+horizontal_alignment = 1

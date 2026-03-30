@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Vitam.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "vitamins"
+item_name = "Витамины"
+description = "Витамины помогают телу быстрее прийти в себя и чуть снижают риск болезней."
+icon = ExtResource("2_icon")
+max_stack_size = 8
+weight = 0.05
+price = 110
+is_consumable = true
+hp_restore = 10
+use_effects = Array[Dictionary]([{
+"id": "disease_risk_multiplier",
+"multiplier": 0.9
+}])
+category = &"medical"
+item_source = &"pharmacy"
+

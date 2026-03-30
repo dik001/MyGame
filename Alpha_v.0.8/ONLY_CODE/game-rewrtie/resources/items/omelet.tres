@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Egg_cooked.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "omelet"
+item_name = "Омлет"
+description = "Мягкий омлет. Ненадолго снимает голод и немного расслабляет."
+icon = ExtResource("2_icon")
+max_stack_size = 8
+weight = 0.3
+is_consumable = true
+is_food = true
+hunger_restore = 40
+mood_delta = 5
+stress_delta = -5
+base_shelf_life_days = 2.0
+category = &"food"
+

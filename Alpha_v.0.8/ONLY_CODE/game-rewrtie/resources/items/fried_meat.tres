@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Meat.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "fried_meat"
+item_name = "Мясо жареное"
+description = "Жареное мясо. Намного приятнее и сытнее сырого."
+icon = ExtResource("2_icon")
+max_stack_size = 6
+weight = 0.5
+price = 135
+is_consumable = true
+is_food = true
+hunger_restore = 50
+mood_delta = 10
+base_shelf_life_days = 4.0
+category = &"food"
+item_source = &"store"
+

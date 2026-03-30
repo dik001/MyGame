@@ -1,0 +1,159 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/InventoryRowUI.gd" id="1_row"]
+[ext_resource type="Theme" uid="uid://ym2gmlusl8o" path="res://resources/ui/game_theme.tres" id="2_theme"]
+[ext_resource type="Material" path="res://resources/ui/item_icon_outline_material.tres" id="3_item_outline"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_normal"]
+bg_color = Color(0.0705882, 0.101961, 0.156863, 0.98)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.509804, 0.631373, 0.792157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_hover"]
+bg_color = Color(0.101961, 0.145098, 0.223529, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.698039, 0.815686, 0.960784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_selected"]
+bg_color = Color(0.12549, 0.180392, 0.270588, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.780392, 0.878431, 0.976471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_row_selected_hover"]
+bg_color = Color(0.14902, 0.211765, 0.309804, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.858824, 0.92549, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icon_panel"]
+bg_color = Color(0.105882, 0.145098, 0.211765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.356863, 0.458824, 0.564706, 1)
+
+[node name="InventoryRowUI" type="Button"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+toggle_mode = true
+mouse_default_cursor_shape = 2
+text = ""
+flat = false
+theme = ExtResource("2_theme")
+theme_override_styles/normal = SubResource("StyleBoxFlat_row_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_row_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_row_selected")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_row_selected_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_row_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_row_normal")
+script = ExtResource("1_row")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="ContentRow" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="IconPanel" type="PanelContainer" parent="MarginContainer/ContentRow"]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_icon_panel")
+
+[node name="IconTextureRect" type="TextureRect" parent="MarginContainer/ContentRow/IconPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+material = ExtResource("3_item_outline")
+
+[node name="FallbackLabel" type="Label" parent="MarginContainer/ContentRow/IconPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="Label" parent="MarginContainer/ContentRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+vertical_alignment = 1
+
+[node name="WeightLabel" type="Label" parent="MarginContainer/ContentRow"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FreshnessLabel" type="Label" parent="MarginContainer/ContentRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="QuantityLabel" type="Label" parent="MarginContainer/ContentRow"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.0196078, 0.0352941, 0.0745098, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+vertical_alignment = 1

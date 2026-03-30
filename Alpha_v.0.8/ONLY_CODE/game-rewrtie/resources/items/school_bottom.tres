@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d4jsgsyh0ejil"]
+
+[ext_resource type="Script" uid="uid://b8f20llgxglg1" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://stik6geq82qq" path="res://tilesets/School_bot.png" id="2_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_school_bottom_icon"]
+atlas = ExtResource("2_sheet")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_item")
+id = "school_bottom"
+item_name = "School Bottom"
+description = "Starter school bottom that stays aligned to the shared body frames."
+icon = SubResource("AtlasTexture_school_bottom_icon")
+weight = 0.4
+category = &"equipment"
+equipment_slot = &"bottom"
+can_sell = false
+appearance_texture = ExtResource("2_sheet")
+tags = PackedStringArray("starter", "school_uniform")

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Sugar.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "sugar"
+item_name = "Сахар"
+description = "Сладкий ингредиент для рецептов. Сам по себе в этом билде не используется."
+icon = ExtResource("2_icon")
+max_stack_size = 12
+weight = 0.15
+price = 20
+is_food = true
+base_shelf_life_days = 365.0
+category = &"food"
+item_source = &"store"
+

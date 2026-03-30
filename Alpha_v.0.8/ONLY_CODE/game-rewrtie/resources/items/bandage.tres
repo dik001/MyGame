@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Bandage.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "bandage"
+item_name = "Бинты"
+description = "Бинты снимают кровотечение и немного подлечивают."
+icon = ExtResource("2_icon")
+max_stack_size = 10
+weight = 0.05
+price = 65
+is_consumable = true
+hp_restore = 5
+use_effects = Array[Dictionary]([{
+"id": "remove_bleeding"
+}])
+category = &"medical"
+item_source = &"pharmacy"
+

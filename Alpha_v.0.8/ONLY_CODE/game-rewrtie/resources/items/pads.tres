@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "pads"
+item_name = "Прокладки"
+description = "Заготовка под будущую систему месячных. Пока предмет сохраняет только технический защитный модификатор."
+max_stack_size = 10
+weight = 0.04
+price = 75
+is_consumable = true
+use_effects = Array[Dictionary]([{
+"id": "leak_risk_multiplier",
+"multiplier": 0.3
+}])
+category = &"medical"
+item_source = &"pharmacy"

@@ -3,3 +3,5 @@ v.0.5/Game-ready/*.exe filter=lfs diff=lfs merge=lfs -text
 Alpha_v.0.6/GameReady/GameReady.exe filter=lfs diff=lfs merge=lfs -text
 Alpha_v.0.6/GameReady/GameReady_1366x768.exe filter=lfs diff=lfs merge=lfs -text
 Alpha_v.0.7/Game-ready/*.exe filter=lfs diff=lfs merge=lfs -text
+Alpha_v.0.8/*.exe filter=lfs diff=lfs merge=lfs -text
+Alpha_v.0.8/ONLY_CODE/Game-ready/*.exe filter=lfs diff=lfs merge=lfs -text

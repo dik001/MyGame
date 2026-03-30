@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/RecipeData.gd" id="1_recipe"]
+[ext_resource type="Resource" path="res://resources/items/grechka_milk.tres" id="2_result"]
+[ext_resource type="Resource" path="res://resources/items/grechka.tres" id="3_grechka"]
+[ext_resource type="Resource" path="res://resources/items/milk.tres" id="4_milk"]
+[ext_resource type="Resource" path="res://resources/items/sugar.tres" id="5_sugar"]
+
+[resource]
+script = ExtResource("1_recipe")
+id = "grechka_milk_recipe"
+recipe_name = "Гречка на молоке"
+description = "Сладкая гречка на молоке."
+result_item = ExtResource("2_result")
+ingredients = Array[Dictionary]([{
+"item": ExtResource("3_grechka"),
+"quantity": 1
+}, {
+"item": ExtResource("4_milk"),
+"quantity": 1
+}, {
+"item": ExtResource("5_sugar"),
+"quantity": 1
+}])
+required_station_tags = PackedStringArray("fire")

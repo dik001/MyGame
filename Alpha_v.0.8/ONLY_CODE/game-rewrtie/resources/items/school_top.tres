@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bvk16y0o8a1u4"]
+
+[ext_resource type="Script" uid="uid://b8f20llgxglg1" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://c6yupwe7v8y76" path="res://tilesets/School_Top.png" id="2_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_school_top_icon"]
+atlas = ExtResource("2_sheet")
+region = Rect2(0, 0, 64, 64)
+
+[resource]
+script = ExtResource("1_item")
+id = "school_top"
+item_name = "School Top"
+description = "Starter school top that uses the shared player frame grid."
+icon = SubResource("AtlasTexture_school_top_icon")
+weight = 0.4
+category = &"equipment"
+equipment_slot = &"top"
+can_sell = false
+appearance_texture = ExtResource("2_sheet")
+tags = PackedStringArray("starter", "school_uniform")

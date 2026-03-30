@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/RecipeData.gd" id="1_recipe"]
+[ext_resource type="Resource" path="res://resources/items/sausage_sandwich.tres" id="2_result"]
+[ext_resource type="Resource" path="res://resources/items/bread.tres" id="3_bread"]
+[ext_resource type="Resource" path="res://resources/items/sausage.tres" id="4_sausage"]
+
+[resource]
+script = ExtResource("1_recipe")
+id = "sausage_sandwich_recipe"
+recipe_name = "Бутерброд с сосисками"
+description = "Быстрый бутерброд без готовки."
+result_item = ExtResource("2_result")
+ingredients = Array[Dictionary]([{
+"item": ExtResource("3_bread"),
+"quantity": 1
+}, {
+"item": ExtResource("4_sausage"),
+"quantity": 1
+}])
+

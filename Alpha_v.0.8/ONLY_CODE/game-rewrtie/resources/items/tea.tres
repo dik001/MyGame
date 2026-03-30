@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Tea.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "tea"
+item_name = "Чай"
+description = "Горячий чай помогает согреться, немного насытиться и выдохнуть."
+icon = ExtResource("2_icon")
+max_stack_size = 10
+weight = 0.1
+price = 25
+is_consumable = true
+is_food = true
+hunger_restore = 10
+mood_delta = 30
+use_effects = Array[Dictionary]([{
+"id": "relaxation"
+}])
+base_shelf_life_days = 365.0
+category = &"food"
+item_source = &"store"
+

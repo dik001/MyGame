@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Selfmade-sig.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "selfmade_cigarette"
+item_name = "Самокрутка"
+description = "Самокрутка с чёрного рынка. Настроение поднимает резко, но цена этому есть."
+icon = ExtResource("2_icon")
+max_stack_size = 8
+weight = 0.05
+price = 120
+is_consumable = true
+mood_delta = 50
+use_effects = Array[Dictionary]([{
+"id": "under_influence"
+}])
+category = &"smoking"
+item_source = &"black_market"
+

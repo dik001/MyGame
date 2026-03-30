@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c55dbp7q1uf3y"]
+
+[ext_resource type="Script" uid="uid://rbfc0fkqyuc4" path="res://scenes/props/bath.gd" id="1_bath"]
+[ext_resource type="Texture2D" uid="uid://co451378xrd5r" path="res://art/props/Bath.png" id="2_rlg0m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlg0m"]
+size = Vector2(11, 20)
+
+[node name="Bath" type="Node2D" unique_id=402371698]
+script = ExtResource("1_bath")
+interaction_radius = 64.0
+grid_occupied_probe_points = Array[Vector2]([Vector2(0, -16), Vector2(0, 16)])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1354142823]
+texture = ExtResource("2_rlg0m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=237574189]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=989213986]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_rlg0m")
+
+[node name="InteractionPoint" type="Marker2D" parent="." unique_id=193233960]
+scale = Vector2(2, 2)

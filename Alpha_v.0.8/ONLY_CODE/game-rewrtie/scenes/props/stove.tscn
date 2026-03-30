@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/props/stove.gd" id="1_stove"]
+
+[node name="Stove" type="Node2D"]
+script = ExtResource("1_stove")
+grid_interaction_pattern_id = &"probes"
+grid_occupied_probe_points = Array[Vector2]([Vector2(-16, -16)])
+grid_interaction_probe_points = Array[Vector2]([Vector2(-48, 16)])
+
+[node name="InteractionPoint" type="Marker2D" parent="."]

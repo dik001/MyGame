@@ -1,0 +1,182 @@
+[gd_scene format=3 uid="uid://dg7b1qook2bxv"]
+
+[ext_resource type="Texture2D" uid="uid://dchx6c0qfjkn2" path="res://tilesets/Casher_tileset.png" id="1_4khyr"]
+[ext_resource type="Script" path="res://scenes/props/cashier_shop_interactable.gd" id="2_cashier_shop"]
+[ext_resource type="Script" uid="uid://b8f20llgxglg1" path="res://scenes/items/ItemData.gd" id="3_item_data"]
+[ext_resource type="Resource" path="res://resources/items/apple.tres" id="4_apple"]
+[ext_resource type="Resource" path="res://resources/items/bread.tres" id="6_bread"]
+[ext_resource type="Resource" path="res://resources/items/canned_food.tres" id="7_canned_food"]
+[ext_resource type="Resource" path="res://resources/items/cheese.tres" id="8_cheese"]
+[ext_resource type="Resource" path="res://resources/items/noodles.tres" id="9_noodles"]
+[ext_resource type="Resource" path="res://resources/items/egg.tres" id="10_egg"]
+[ext_resource type="Resource" path="res://resources/items/meat.tres" id="11_meat"]
+[ext_resource type="Resource" path="res://resources/items/milk.tres" id="12_milk"]
+[ext_resource type="Resource" path="res://resources/items/sausage.tres" id="13_sausage"]
+[ext_resource type="Resource" path="res://resources/items/potato.tres" id="14_potato"]
+[ext_resource type="Resource" path="res://resources/items/grechka.tres" id="15_grechka"]
+[ext_resource type="Resource" path="res://resources/items/tea.tres" id="16_tea"]
+[ext_resource type="Resource" path="res://resources/items/sugar.tres" id="17_sugar"]
+[ext_resource type="Resource" path="res://resources/items/chips.tres" id="18_chips"]
+[ext_resource type="Resource" path="res://resources/items/soda.tres" id="19_soda"]
+[ext_resource type="Resource" path="res://resources/items/energy_drink.tres" id="20_energy_drink"]
+[ext_resource type="Resource" path="res://resources/items/cheap_burger.tres" id="21_cheap_burger"]
+[ext_resource type="Resource" path="res://resources/items/chocolate.tres" id="22_chocolate"]
+[ext_resource type="Resource" path="res://resources/items/fried_meat.tres" id="23_fried_meat"]
+[ext_resource type="Resource" path="res://resources/items/beer.tres" id="24_beer"]
+[ext_resource type="Resource" path="res://resources/items/wine.tres" id="25_wine"]
+[ext_resource type="Resource" path="res://resources/items/cigarettes.tres" id="26_cigarettes"]
+[ext_resource type="Resource" path="res://resources/items/vape.tres" id="27_vape"]
+[ext_resource type="Resource" path="res://resources/items/soap.tres" id="28_soap"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtiqs"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_keksj"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t6b6"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao1hq"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(128, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a05lt"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v13hu"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpvd8"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ock6s"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyiui"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kb42"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6avok"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okei0"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w4c0"]
+atlas = ExtResource("1_4khyr")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_76o5i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtiqs")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_keksj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1t6b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao1hq")
+}],
+"loop": true,
+"name": &"Walk_Back",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a05lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v13hu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpvd8")
+}],
+"loop": true,
+"name": &"Walk_Front",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ock6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyiui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kb42")
+}],
+"loop": true,
+"name": &"Walk_Left",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6avok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okei0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w4c0")
+}],
+"loop": true,
+"name": &"Walk_Right",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ffura"]
+height = 54.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1n5i"]
+size = Vector2(45, 107)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=304360619]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1445989228]
+sprite_frames = SubResource("SpriteFrames_76o5i")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=656453745]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_ffura")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=962257243]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1562673945]
+position = Vector2(-0.5, 22.5)
+shape = SubResource("RectangleShape2D_d1n5i")
+
+[node name="ShopInteractable" type="Node2D" parent="."]
+script = ExtResource("2_cashier_shop")
+interaction_radius = 52.0
+catalog = Array[ExtResource("3_item_data")]([ExtResource("4_apple"), ExtResource("6_bread"), ExtResource("7_canned_food"), ExtResource("8_cheese"), ExtResource("9_noodles"), ExtResource("10_egg"), ExtResource("11_meat"), ExtResource("12_milk"), ExtResource("13_sausage"), ExtResource("14_potato"), ExtResource("15_grechka"), ExtResource("16_tea"), ExtResource("17_sugar"), ExtResource("18_chips"), ExtResource("19_soda"), ExtResource("20_energy_drink"), ExtResource("21_cheap_burger"), ExtResource("22_chocolate"), ExtResource("23_fried_meat"), ExtResource("24_beer"), ExtResource("25_wine"), ExtResource("26_cigarettes"), ExtResource("27_vape"), ExtResource("28_soap")])
+window_title_text = "Касса"
+window_subtitle_text = "Те же товары, но дешевле. Оплата в долларах, доставка через 4 игровых часа."
+price_overrides = {}
+catalog_price_multiplier = 0.8
+
+[node name="InteractionPoint" type="Marker2D" parent="ShopInteractable"]
+position = Vector2(0, 28)

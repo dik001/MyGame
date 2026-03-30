@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Grechka.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "grechka"
+item_name = "Крупа"
+description = "Плотная крупа, которую можно съесть и так, но желудок за такое не поблагодарит."
+icon = ExtResource("2_icon")
+max_stack_size = 8
+weight = 0.35
+price = 45
+is_consumable = true
+is_food = true
+hunger_restore = 50
+use_effects = Array[Dictionary]([{
+"id": "indigestion"
+}])
+base_shelf_life_days = 180.0
+category = &"food"
+item_source = &"store"
+

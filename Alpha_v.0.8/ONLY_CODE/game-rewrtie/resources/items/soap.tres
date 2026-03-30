@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/items/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://art/items/food/Soap.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "soap"
+item_name = "Мыло"
+description = "Мыло лучше использовать прямо перед мытьём, чтобы ванна дала больше гигиены."
+icon = ExtResource("2_icon")
+max_stack_size = 6
+weight = 0.2
+price = 30
+is_consumable = true
+use_effects = Array[Dictionary]([{
+"id": "soap_bath_bonus",
+"bonus_hygiene": 30
+}])
+category = &"household"
+item_source = &"store"
+
